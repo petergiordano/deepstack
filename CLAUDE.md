@@ -8,8 +8,10 @@ This is a Python-based web scraping and analysis tool called "DeepStack Collecto
 
 ## Project Structure
 
-```
+```text
 deepstack/
+├── deepstack.py                   # Python launcher script (recommended)
+├── deepstack.sh                   # Shell launcher script
 ├── src/                           # Source code
 │   └── deepstack_collector.py     # Main analysis script
 ├── docs/                          # Documentation and visualizations
@@ -40,29 +42,34 @@ The project consists of a single main script (`src/deepstack_collector.py`) that
 ## Installation & Setup
 
 ### Prerequisites
+
 - Python 3.7 or higher
 - pip (Python package manager)
 
 ### Setup Steps
 
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/petergiordano/deepstack.git
    cd deepstack
    ```
 
 2. **Create a virtual environment (recommended):**
+
    ```bash
    python3 -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
 3. **Install Python dependencies:**
+
    ```bash
    pip install -r requirements.txt
    ```
 
 4. **Install Playwright browsers:**
+
    ```bash
    playwright install chromium
    ```
@@ -76,16 +83,47 @@ The project consists of a single main script (`src/deepstack_collector.py`) that
 
 ## Running the Tool
 
-### Single URL Analysis
+You can run the DeepStack Collector from the root directory using either of the provided launcher scripts:
+
+### Using Python Launcher (Recommended)
+
+**Single URL Analysis:**
+```bash
+python3 deepstack.py -u https://example.com
+```
+
+**Batch Analysis:**
+```bash
+python3 deepstack.py
+```
+
+### Using Shell Launcher
+
+**Single URL Analysis:**
+```bash
+./deepstack.sh -u https://example.com
+```
+
+**Batch Analysis:**
+```bash
+./deepstack.sh
+```
+
+### Direct Execution
+
+You can also run the script directly from the src directory:
+
+**Single URL Analysis:**
 ```bash
 python3 src/deepstack_collector.py -u https://example.com
 ```
 
-### Batch Analysis
+**Batch Analysis:**
 ```bash
 python3 src/deepstack_collector.py
 ```
-This reads URLs from `urls_to_analyze.txt` (one URL per line, comments start with #)
+
+**Note:** Batch analysis reads URLs from `urls_to_analyze.txt` (one URL per line, comments start with #)
 
 ## Input/Output Files
 
@@ -95,12 +133,14 @@ This reads URLs from `urls_to_analyze.txt` (one URL per line, comments start wit
 ## Detection Signatures
 
 The tool uses regex pattern matching to identify technologies through:
+
 - Script tag sources and inline content
 - Network request URLs
 - HTML content patterns
 - JavaScript object detection
 
 Key signature dictionaries:
+
 - `MARTECH_SIGNATURES`: Marketing technology tools
 - `COOKIE_CONSENT_SIGNATURES`: Cookie consent management platforms
 - `FEATURE_FLAG_SIGNATURES`: Feature flag and A/B testing systems
@@ -110,6 +150,7 @@ Key signature dictionaries:
 ## Browser Configuration
 
 The tool uses Chromium with stealth mode and specific launch arguments to avoid detection:
+
 - Headless mode configurable (`headless=False` for debugging)
 - Custom user agent and viewport settings
 - Cloudflare challenge detection and handling
@@ -125,6 +166,7 @@ The tool uses Chromium with stealth mode and specific launch arguments to avoid 
 ## Error Handling
 
 The tool includes comprehensive error handling for:
+
 - Network timeouts and connection issues
 - Cloudflare protection challenges
 - Malformed HTML and JavaScript
