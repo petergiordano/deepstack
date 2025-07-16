@@ -6,6 +6,36 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a Python-based web scraping and analysis tool called "DeepStack Collector" that analyzes websites for marketing technology (MarTech) stacks, conversion tracking, and competitive intelligence. The tool uses Playwright for web automation and BeautifulSoup for HTML parsing.
 
+## Three-Step Analysis Pipeline
+
+DeepStack operates as part of a comprehensive three-step analysis pipeline:
+
+### Step 1: DeepStack Collector (This Tool)
+- **Purpose**: Raw data collection and technical signal detection
+- **Output**: JSON files with structured technical data across 5 core areas:
+  - Marketing Technology & Data Foundation
+  - Organic Presence & Content Signals  
+  - User Experience & Performance Clues
+  - Conversion & Funnel Effectiveness
+  - Competitive Posture & Strategic Tests
+
+### Step 2: DeepStack Analysis Gem (Gemini AI Agent)
+- **Purpose**: Interpret and analyze technical signals from DeepStack output
+- **Documentation**: `docs/deepstack_analysis_agent_docs/`
+- **Process**: Transforms raw technical data into structured insights across three levels:
+  - **L1 Signals**: Basic technical detection and categorization
+  - **L2 Snapshot**: Contextual analysis and pattern recognition
+  - **L3 Ground Truth**: Strategic interpretation and recommendations
+- **Output**: Structured analysis ready for marketing strategy development
+
+### Step 3: Marketing Effectiveness Analysis Agent (MEARA)
+- **Purpose**: Generate strategic marketing recommendations and reports
+- **Documentation**: `docs/meara_agent_docs/`
+- **Process**: Uses DeepStack Analysis Gem output to create comprehensive marketing effectiveness reports
+- **Output**: Executive-ready marketing analysis with actionable recommendations
+
+This pipeline transforms raw website data into strategic marketing intelligence through progressive analysis and interpretation.
+
 ## Project Structure
 
 ```text
@@ -202,11 +232,23 @@ The tool includes comprehensive error handling for:
 
 ## AI Agent Documentation
 
-The `docs/` directory contains two sets of AI agent documentation:
+The `docs/` directory contains documentation for building the two AI agents in the analysis pipeline:
 
-### MEARA Agent Documentation (`docs/meara_agent_docs/`)
+### Step 2: DeepStack Analysis Agent Documentation (`docs/deepstack_analysis_agent_docs/`)
 
-Documentation for building AI agents that consume DeepStack collector output for marketing analysis:
+Documentation for building **Gemini AI agents** that interpret DeepStack's raw technical output:
+
+- **System_Instructions_DeepStack_Analysis_Gem.md**: Core system instructions for DeepStack analysis agents
+- **Instruct_DeepStack_L1_Signals.md**: L1 signal detection and interpretation instructions
+- **Instruct_DeepStack_L2_Snapshot.md**: L2 snapshot analysis methodology
+- **Instruct_DeepStack_L3_GroundTruth.md**: L3 ground truth analysis framework
+- **_README-DeepStack_Analysis_Gem.md**: Overview and setup guide for DeepStack analysis gems
+
+**Purpose**: These agents consume DeepStack Collector's raw JSON output and transform technical signals into structured insights across three progressive analysis levels (L1→L2→L3).
+
+### Step 3: MEARA Agent Documentation (`docs/meara_agent_docs/`)
+
+Documentation for building **marketing effectiveness analysis agents** that generate strategic reports:
 
 - **project_system_Instructions.md**: System instructions for B2B SaaS Marketing Analysis AI agents
 - **instruct_marketing_analysis.md**: Detailed methodology and output formatting requirements
@@ -216,17 +258,15 @@ Documentation for building AI agents that consume DeepStack collector output for
 - **deep_research_prompt-meara-b2b-insights.md**: Prompts for deep research insights
 - **Actual-Marketing-Analysis-Example-by-Maria-P.md**: Reference example of analysis output
 
-### DeepStack Analysis Agent Documentation (`docs/deepstack_analysis_agent_docs/`)
+**Purpose**: These agents consume the structured insights from DeepStack Analysis Gems and generate comprehensive marketing effectiveness reports with actionable recommendations.
 
-Documentation for building AI agents that analyze and interpret DeepStack's technical output:
+### Pipeline Integration
 
-- **System_Instructions_DeepStack_Analysis_Gem.md**: Core system instructions for DeepStack analysis agents
-- **Instruct_DeepStack_L1_Signals.md**: L1 signal detection and interpretation instructions
-- **Instruct_DeepStack_L2_Snapshot.md**: L2 snapshot analysis methodology
-- **Instruct_DeepStack_L3_GroundTruth.md**: L3 ground truth analysis framework
-- **_README-DeepStack_Analysis_Gem.md**: Overview and setup guide for DeepStack analysis gems
+1. **DeepStack Collector** → Raw technical data (JSON)
+2. **DeepStack Analysis Gem** → Structured insights and interpretations  
+3. **MEARA Agent** → Strategic marketing recommendations and reports
 
-These documents are used to build Claude Projects, Gemini Gems, ChatGPT Custom GPTs, and other AI agents that process DeepStack's raw JSON output into strategic intelligence. They serve as reference material for improving the collector's data structure and ensuring it captures the signals needed for downstream analysis.
+These documents serve as reference material for building Claude Projects, Gemini Gems, ChatGPT Custom GPTs, and other AI agents that form the complete analysis pipeline.
 
 ### Workflow Documentation and Visualizations
 
