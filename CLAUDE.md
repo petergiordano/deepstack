@@ -124,6 +124,32 @@ The `meara_agent_docs/` folder contains reference documentation for building AI 
 
 These documents are used to build Claude Projects, Gemini Gems, ChatGPT Custom GPTs, and other AI agents that process DeepStack's raw JSON output into strategic marketing intelligence. They serve as reference material for improving the collector's data structure and ensuring it captures the signals needed for downstream analysis.
 
+## Tools Directory
+
+The `tools/` directory contains utility scripts for maintaining and processing project files:
+
+- **clean_markdown.py**: Command-line interface for cleaning escaped markdown characters from Google Docs exports
+- **markdown_cleaner.py**: Core cleaning function that removes backslash escapes from markdown formatting (headers, emphasis, lists, links, etc.)
+
+These tools were used to clean the MEARA documentation files that were exported from Google Docs with escaped characters. The cleaning scripts can be run on individual files or in batch mode using shell commands.
+
+### Usage Examples
+
+Clean a single markdown file:
+```bash
+python3 tools/clean_markdown.py input.md -o output.md
+```
+
+Test cleaning without writing changes:
+```bash
+python3 tools/clean_markdown.py input.md --dry-run
+```
+
+Clean all markdown files in a directory:
+```bash
+find meara_agent_docs -name "*.md" -exec python3 tools/clean_markdown.py {} \;
+```
+
 ## Security Considerations
 
 This tool is designed for legitimate security research and competitive analysis. It implements rate limiting, respects robots.txt patterns in URL filtering, and includes stealth capabilities to avoid triggering anti-bot measures.
