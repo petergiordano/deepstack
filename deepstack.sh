@@ -5,9 +5,13 @@ DeepStack Collector Shell Launcher
 This shell script provides a convenient way to run the DeepStack Collector
 from the root directory while the actual implementation is in src/
 
+Output Files:
+    - Single URL mode: deepstack_output-{domain}.json (e.g., deepstack_output-example.com.json)
+    - Batch mode: deepstack_output.json
+
 Usage:
-    ./deepstack.sh -u https://example.com
-    ./deepstack.sh  # For batch analysis
+    ./deepstack.sh -u https://example.com  # Single URL analysis
+    ./deepstack.sh                          # Batch analysis from urls_to_analyze.txt
     bash deepstack.sh -u https://example.com
 """
 

@@ -5,9 +5,13 @@ DeepStack Collector Launcher Script
 This script provides a convenient way to run the DeepStack Collector from the root directory
 while the actual implementation is located in the src/ directory.
 
+Output Files:
+    - Single URL mode: deepstack_output-{domain}.json (e.g., deepstack_output-example.com.json)
+    - Batch mode: deepstack_output.json
+
 Usage:
-    python3 deepstack.py -u https://example.com
-    python3 deepstack.py  # For batch analysis
+    python3 deepstack.py -u https://example.com  # Single URL analysis
+    python3 deepstack.py                          # Batch analysis from urls_to_analyze.txt
 """
 
 import sys

@@ -1,15 +1,28 @@
+"""
+DeepStack Collector - Website MarTech Analysis Tool
+
+Analyzes websites for marketing technology stacks, conversion tracking, and competitive intelligence.
+Uses Playwright for web automation and BeautifulSoup for HTML parsing.
+
+Output Files:
+    - Single URL mode (-u): deepstack_output-{domain}.json (e.g., deepstack_output-example.com.json)
+    - Batch mode: deepstack_output.json (reads from urls_to_analyze.txt)
+
+Usage:
+    python3 deepstack_collector.py -u https://example.com  # Single URL analysis
+    python3 deepstack_collector.py                          # Batch analysis
+"""
+
 from playwright.sync_api import sync_playwright
 import time
 from bs4 import BeautifulSoup
 import re
-import json # Ensure this is present
-from datetime import datetime, timezone # ADD THIS LINE (or ensure it's there and includes timezone)
-import random # ADD THIS LINE FOR RANDOM DELAYS
-from playwright_stealth import stealth_sync # ADD THIS LINE
-import argparse # ADD THIS LINE
-from urllib.parse import urlparse # For extracting domain names
-
-
+import json  # Ensure this is present
+from datetime import datetime, timezone  # For timestamps
+import random  # For random delays between requests
+from playwright_stealth import stealth_sync  # For avoiding detection
+import argparse  # For command-line argument parsing
+from urllib.parse import urlparse  # For extracting domain names
 
 
 # -----------------------------------------------------------------------------
@@ -904,11 +917,14 @@ def main():
         }
 
         # Write the JSON output to a file
-        # Generate output filename based on execution mode
+        # Generate output filename based on execution mode:
+        # - Single URL: deepstack_output-{domain}.json 
+        # - Batch mode: deepstack_output.json
         if args.url:
             # Single URL mode - extract domain name for filename
             parsed_url = urlparse(args.url)
-            domain = parsed_url.netloc.replace('www.', '').replace(':', '_')  # Remove www. and replace : with _
+            # Remove www. prefix and replace colons with underscores for ports
+            domain = parsed_url.netloc.replace('www.', '').replace(':', '_')
             output_filename = f"deepstack_output-{domain}.json"
         else:
             # Batch mode - use generic filename
