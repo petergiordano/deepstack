@@ -5,23 +5,23 @@ Analyzes websites for marketing technology stacks, conversion tracking, and comp
 Uses Playwright for web automation and BeautifulSoup for HTML parsing.
 
 Output Files:
-    - Single URL mode (-u): deepstack_output-{domain}.json (e.g., deepstack_output-example.com.json)
-    - Batch mode: deepstack_output.json (reads from urls_to_analyze.txt)
+    - Single URL mode (-u): output/deepstack_output-{domain}.json (e.g., output/deepstack_output-example.com.json)
+    - Batch mode: output/deepstack_output.json (reads from urls_to_analyze.txt)
 
 Usage:
     Single URL Mode:
         python3 deepstack_collector.py -u https://example.com
-        # Output: deepstack_output-example.com.json
+        # Output: output/deepstack_output-example.com.json
 
         python3 deepstack_collector.py -u https://www.google.com
-        # Output: deepstack_output-google.com.json
+        # Output: output/deepstack_output-google.com.json
 
         python3 deepstack_collector.py -u https://subdomain.example.com:8080
-        # Output: deepstack_output-subdomain.example.com_8080.json
+        # Output: output/deepstack_output-subdomain.example.com_8080.json
 
     Batch Mode:
         python3 deepstack_collector.py
-        # Output: deepstack_output.json (reads from urls_to_analyze.txt)
+        # Output: output/deepstack_output.json (reads from urls_to_analyze.txt)
 """
 
 from playwright.sync_api import sync_playwright
@@ -34,6 +34,7 @@ import random  # For random delays between requests
 from playwright_stealth import stealth_sync  # For avoiding detection
 import argparse  # For command-line argument parsing
 from urllib.parse import urlparse  # For extracting domain names
+import os  # For directory operations
 
 
 # -----------------------------------------------------------------------------
@@ -929,17 +930,24 @@ def main():
 
         # Write the JSON output to a file
         # Generate output filename based on execution mode:
-        # - Single URL: deepstack_output-{domain}.json 
-        # - Batch mode: deepstack_output.json
+        # - Single URL: output/deepstack_output-{domain}.json 
+        # - Batch mode: output/deepstack_output.json
+        
+        # Create output directory if it doesn't exist
+        output_dir = "output"
+        if not os.path.exists(output_dir):
+            os.makedirs(output_dir)
+            print(f"Created output directory: {output_dir}/")
+        
         if args.url:
             # Single URL mode - extract domain name for filename
             parsed_url = urlparse(args.url)
             # Remove www. prefix and replace colons with underscores for ports
             domain = parsed_url.netloc.replace('www.', '').replace(':', '_')
-            output_filename = f"deepstack_output-{domain}.json"
+            output_filename = os.path.join(output_dir, f"deepstack_output-{domain}.json")
         else:
             # Batch mode - use generic filename
-            output_filename = "deepstack_output.json"
+            output_filename = os.path.join(output_dir, "deepstack_output.json")
         try:
             with open(output_filename, 'w') as f:
                 json.dump(final_json_output, f, indent=2) # indent=2 for pretty-printing

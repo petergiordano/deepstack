@@ -6,23 +6,23 @@ This script provides a convenient way to run the DeepStack Collector from the ro
 while the actual implementation is located in the src/ directory.
 
 Output Files:
-    - Single URL mode: deepstack_output-{domain}.json (e.g., deepstack_output-example.com.json)
-    - Batch mode: deepstack_output.json
+    - Single URL mode: output/deepstack_output-{domain}.json (e.g., output/deepstack_output-example.com.json)
+    - Batch mode: output/deepstack_output.json
 
 Usage:
     Single URL Mode:
         python3 deepstack.py -u https://example.com
-        # Output: deepstack_output-example.com.json
+        # Output: output/deepstack_output-example.com.json
 
         python3 deepstack.py -u https://www.google.com
-        # Output: deepstack_output-google.com.json
+        # Output: output/deepstack_output-google.com.json
 
         python3 deepstack.py -u https://subdomain.example.com:8080
-        # Output: deepstack_output-subdomain.example.com_8080.json
+        # Output: output/deepstack_output-subdomain.example.com_8080.json
 
     Batch Mode:
         python3 deepstack.py
-        # Output: deepstack_output.json (reads from urls_to_analyze.txt)
+        # Output: output/deepstack_output.json (reads from urls_to_analyze.txt)
 """
 
 import sys

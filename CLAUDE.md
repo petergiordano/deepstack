@@ -122,20 +122,20 @@ You can run the DeepStack Collector from the root directory using either of the 
 
 ```bash
 python3 deepstack.py -u https://example.com
-# Output: deepstack_output-example.com.json
+# Output: output/deepstack_output-example.com.json
 
 python3 deepstack.py -u https://www.google.com
-# Output: deepstack_output-google.com.json
+# Output: output/deepstack_output-google.com.json
 
 python3 deepstack.py -u https://subdomain.example.com:8080
-# Output: deepstack_output-subdomain.example.com_8080.json
+# Output: output/deepstack_output-subdomain.example.com_8080.json
 ```
 
 **Batch Analysis:**
 
 ```bash
 python3 deepstack.py
-# Output: deepstack_output.json (reads from urls_to_analyze.txt)
+# Output: output/deepstack_output.json (reads from urls_to_analyze.txt)
 ```
 
 ### Using Shell Launcher
@@ -144,20 +144,20 @@ python3 deepstack.py
 
 ```bash
 ./deepstack.sh -u https://example.com
-# Output: deepstack_output-example.com.json
+# Output: output/deepstack_output-example.com.json
 
 ./deepstack.sh -u https://www.google.com
-# Output: deepstack_output-google.com.json
+# Output: output/deepstack_output-google.com.json
 
 ./deepstack.sh -u https://subdomain.example.com:8080
-# Output: deepstack_output-subdomain.example.com_8080.json
+# Output: output/deepstack_output-subdomain.example.com_8080.json
 ```
 
 **Batch Analysis:**
 
 ```bash
 ./deepstack.sh
-# Output: deepstack_output.json (reads from urls_to_analyze.txt)
+# Output: output/deepstack_output.json (reads from urls_to_analyze.txt)
 ```
 
 ### Direct Execution
@@ -181,11 +181,11 @@ python3 src/deepstack_collector.py
 ## Input/Output Files
 
 - **Input**: `urls_to_analyze.txt` - Contains URLs to analyze (created automatically if missing)
-- **Output**:
-  - **Single URL mode**: `deepstack_output-{domain}.json` (e.g., `deepstack_output-example.com.json`)
+- **Output**: All output files are automatically saved to the `output/` directory
+  - **Single URL mode**: `output/deepstack_output-{domain}.json` (e.g., `output/deepstack_output-example.com.json`)
     - Automatically extracts domain name from URL, removes `www.` prefix
-    - Replaces colons with underscores for ports (e.g., `example.com_8080`)
-  - **Batch mode**: `deepstack_output.json` - Structured analysis results with metadata
+    - Replaces colons with underscores for ports (e.g., `output/deepstack_output-example.com_8080.json`)
+  - **Batch mode**: `output/deepstack_output.json` - Structured analysis results with metadata
 
 ## Detection Signatures
 
