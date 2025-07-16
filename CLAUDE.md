@@ -16,12 +16,42 @@ The project consists of a single main script (`deepstack_collector.py`) that per
 4. **Conversion & Funnel Effectiveness**: Detects conversion events and analyzes forms (including those in iframes)
 5. **Competitive Posture & Strategic Tests**: Identifies A/B testing tools and feature flag systems
 
-## Key Dependencies
+## Installation & Setup
 
-- `playwright` with `playwright-stealth` for browser automation
-- `beautifulsoup4` for HTML parsing  
-- `argparse` for command-line interface
-- Standard library: `json`, `datetime`, `re`, `random`, `time`
+### Prerequisites
+- Python 3.7 or higher
+- pip (Python package manager)
+
+### Setup Steps
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/petergiordano/deepstack.git
+   cd deepstack
+   ```
+
+2. **Create a virtual environment (recommended):**
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+3. **Install Python dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Install Playwright browsers:**
+   ```bash
+   playwright install chromium
+   ```
+
+### Key Dependencies
+
+- `playwright==1.40.0` - Web automation framework
+- `playwright-stealth==1.0.6` - Stealth mode for avoiding detection
+- `beautifulsoup4==4.12.2` - HTML parsing library
+- Standard library: `json`, `datetime`, `re`, `random`, `time`, `argparse`
 
 ## Running the Tool
 
@@ -79,6 +109,20 @@ The tool includes comprehensive error handling for:
 - Malformed HTML and JavaScript
 - Missing or inaccessible iframes
 - JSON serialization errors
+
+## MEARA Agent Documentation
+
+The `meara_agent_docs/` folder contains reference documentation for building AI agents that consume DeepStack collector output for marketing analysis:
+
+- **project_system_Instructions.md**: System instructions for B2B SaaS Marketing Analysis AI agents
+- **instruct_marketing_analysis.md**: Detailed methodology and output formatting requirements
+- **marketing_analysis_methodology.md**: 9-step analysis framework
+- **marketing_analysis_rubrics.md**: Evaluation criteria for marketing dimensions
+- **strategic_elements_framework.md**: Framework for strategic assessment
+- **deep_research_prompt-meara-b2b-insights.md**: Prompts for deep research insights
+- **Actual-Marketing-Analysis-Example-by-Maria-P.md**: Reference example of analysis output
+
+These documents are used to build Claude Projects, Gemini Gems, ChatGPT Custom GPTs, and other AI agents that process DeepStack's raw JSON output into strategic marketing intelligence. They serve as reference material for improving the collector's data structure and ensuring it captures the signals needed for downstream analysis.
 
 ## Security Considerations
 
