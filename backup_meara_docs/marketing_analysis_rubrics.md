@@ -8,13 +8,13 @@ While the user-provided Deep Research Brief provides critical context for your r
 
 When applying these rubrics, the evaluator MUST consider insights and evidence presented in the user-provided 'Deep Research Brief' provided for the company. The brief may offer deeper context, identify non-obvious strengths or weaknesses, or highlight emerging trends that should influence the rating and qualitative assessment for each element. For instance, a 'Competent' surface-level execution might be downgraded if the user-provided Deep Research Brief reveals a significant missed strategic opportunity or an unaddressed emerging threat relevant to that element.
 
-This rubric document contains detailed evaluation criteria for the nine dimensions assessed in the [Marketing Analysis Methodology v2](https://docs.google.com/document/u/0/d/1dN81jf00NiCctWZDjgrxdWt_YTe9sGUHDAFjbM8gI-8/edit) . [methodology document] For complete guidance on the analysis process:
+This rubric document contains detailed evaluation criteria for the nine dimensions assessed in the [Marketing Analysis Methodology v2](https://docs.google.com/document/u/0/d/1dN81jf00NiCctWZDjgrxdWt_YTe9sGUHDAFjbM8gI-8/edit) . \[methodology document\] For complete guidance on the analysis process:
 
 1. Follow the step-by-step instructions in the methodology document  
 2. Use this rubric to perform dimension evaluations in Step 3 of the methodology  
 3. Reference specific criteria when documenting strengths and opportunities  
-4. Use these criteria to identify patterns for root cause analysis (Step 4)  
-5. Ensure recommendations (Step 5) address gaps identified using these rubrics
+4. Use these criteria to identify patterns for root cause analysis (Step 4\)  
+5. Ensure recommendations (Step 5\) address gaps identified using these rubrics
 
 For questions about applying these rubrics, refer to [Section 3.1.5 "How to Use the Marketing Analysis Rubrics"](https://docs.google.com/document/d/1dN81jf00NiCctWZDjgrxdWt_YTe9sGUHDAFjbM8gI-8/edit?tab=t.0#bookmark=id.wlk7ta74qeph) in the [methodology document](https://docs.google.com/document/u/0/d/1dN81jf00NiCctWZDjgrxdWt_YTe9sGUHDAFjbM8gI-8/edit).
 
@@ -41,8 +41,8 @@ When applying these rubrics, it's important to distinguish between:
 2. Note when similar issues appear across multiple dimensions  
 3. Consider which issues might be symptoms versus causes  
 4. In your findings documentation, distinguish between:  
-   - "Unique finding in [Dimension]" for issues specific to that dimension  
-   - "Manifestation of [Root Cause]" for symptoms of a broader issue
+   - "Unique finding in \[Dimension\]" for issues specific to that dimension  
+   - "Manifestation of \[Root Cause\]" for symptoms of a broader issue
 
 This approach will facilitate more accurate root cause identification and help prioritize recommendations that address fundamental issues rather than just their symptoms.
 
@@ -214,7 +214,7 @@ Watch for these cross-dimensional dependencies when evaluating buyer journey com
 | **AI Engine Optimization & Recommendation Readiness** | Content is highly structured, utilizes clear semantic language, and strategically employs relevant and correctly implemented schema markup (e.g., for products, services, FAQs, reviews, how-to articles, events) where appropriate. This demonstrably facilitates accurate interpretation and enhanced surfacing by AI engines, chatbots, and modern search algorithms. The company and its core offerings are frequently and accurately recommended by relevant AI-powered discovery tools for pertinent queries, supported by its strong public data signals and easily parsable content, and this aligns with or is validated by specific findings on 'AI Engine Perception & Digital Body Language' in the user-provided  Deep Research Brief. Key entity information about the company, its products, services, and expertise is consistently and clearly presented across the digital presence, making it easy for machines to understand 'who they are,' 'what they do,' and 'why they are relevant.' | Website content is generally clear and well-organized, allowing AI engines and search algorithms to extract information with reasonable accuracy. Basic AEO principles (e.g., logical heading structure, clear entity descriptions) are considered. The company's presence in AI-generated summaries is adequate but may lack the prominence or nuanced accuracy suggested as optimal by the  user-provided Deep Research Brief's 'AI Engine Perception' findings. Some schema markup may be present but not comprehensively or strategically applied.  | Inconsistent language, poor content structure, limited or incorrect schema markup, or lack of clarity hinders effective AI engine and search algorithm interpretation. Basic AEO best practices are not evident. The company may be poorly represented or inconsistently surfaced in AI-generated summaries, a situation potentially highlighted by the user-provided  Deep Research Brief, indicating a missed opportunity for better AI recommendation readiness. | Content is difficult for AI engines and search algorithms to parse effectively due to poor structure, unclear language, or lack of semantic cues; information is frequently misinterpreted or not surfaced optimally by AI-driven discovery tools, potentially confirmed or detailed as a significant issue in the user-provided Deep Research Brief's 'AI Engine Perception' analysis. No discernible AEO strategy or foundational practices (like structured data for key information or clear heading hierarchies) are apparent.  |
 | **Third-Party Validation** | Extensive reviews across platforms with strong ratings and case studies | Moderate review presence with generally positive sentiment | Limited reviews primarily on a single platform | No visible third-party validation |
 | **Media & Analyst Coverage** | Regular, substantive coverage in industry publications and analyst reports | Some media mentions and occasional analyst recognition | Limited coverage primarily through self-placed content | No significant media or analyst coverage |
-| **Social Proof Diversity** | Rich mix of testimonials, case studies, statistics, social signals, and active highlighting of notable past achievements/awards or strong positive community feedback. Systematically resurfaces and integrates evidence of past major successful initiatives, well-received events (e.g., a previous [generic example: widely cited company research report or a successful keynote at a major industry event] with positive documented outcomes), or highly positive historical community feedback into ongoing marketing and as prominent social proof. | Standard testimonials and basic case studies | Fails to leverage or make visible documented past successes or well-received historical initiatives (e.g., a popular [generic example: series of expert interviews or a significant product innovation from a prior year] that built brand equity) in current marketing efforts. | No meaningful social proof elements |
+| **Social Proof Diversity** | Rich mix of testimonials, case studies, statistics, social signals, and active highlighting of notable past achievements/awards or strong positive community feedback. Systematically resurfaces and integrates evidence of past major successful initiatives, well-received events (e.g., a previous \[generic example: widely cited company research report or a successful keynote at a major industry event\] with positive documented outcomes), or highly positive historical community feedback into ongoing marketing and as prominent social proof. | Standard testimonials and basic case studies | Fails to leverage or make visible documented past successes or well-received historical initiatives (e.g., a popular \[generic example: series of expert interviews or a significant product innovation from a prior year\] that built brand equity) in current marketing efforts. | No meaningful social proof elements |
 | **Digital Footprint Breadth** | Active presence across multiple relevant channels with consistent engagement, leveraging historical successes where appropriate.	 | Presence on major platforms with irregular engagement | Limited presence on few platforms with minimal activity | Minimal digital footprint beyond website |
 | **Community Engagement** | Vibrant community with active discussion and peer-to-peer engagement | Some community elements with limited interaction | Minimal community presence or engagement | No visible community strategy |
 | **Competitive Ad Defense** | Strong branded search presence with no, or only minimal and demonstrably insignificant, direct competitor ad encroachment on primary branded keywords (company name, primary product names) on the first page of search results; clear strategy in place to actively monitor and vigorously defend branded SERPs, potentially including defensive bidding or other countermeasures if significant threats emerge. | Some competitive ads on branded terms but good organic position | Significant competitive advertising on branded terms | Company's primary brand terms are consistently and heavily targeted by multiple competitor ads appearing prominently on the first page of search results, indicating a significant vulnerability and potential traffic/brand erosion, with no apparent counter-strategy or acknowledgment of this significant brand hijacking and traffic diversion issue. |
@@ -280,7 +280,7 @@ When evaluating this dimension, consider its foundational role in enabling effec
 | **Specificity & Actionability** | Detailed, specific actions with clear ownership and timeline | Generally clear actions but some ambiguity in execution | Vague directives without clear next steps | Generic suggestions with no implementation path |
 | **Resource Calibration** | Accurately scoped for company size and stage with realistic resource needs | Generally appropriate resource requirements | Some recommendations exceed realistic capabilities | Recommendations require unreasonable resources |
 | **Prioritization Logic** | Clear rationale for sequencing based on dependencies and impact | Some prioritization logic but incomplete | Limited consideration of sequence or dependencies | No clear prioritization approach |
-| **Technology Leadership & Innovation Showcase (Presentation & IA)** | Website structure and content presentation strongly reflect best practices of leading technology-innovative companies relevant to their sector. This includes a dedicated, easily discoverable, and prominently featured section (e.g., 'Our Technology,' 'Innovation Insights,' 'R&D Highlights,' 'Engineering Blog,' or 'Research Portal' – distinct from simply a general blog) that effectively showcases expertise, future vision, and the depth of their technological approach. The company successfully blends deep technical content (where appropriate for specific audiences, e.g., data sheets, architectural diagrams) with clear, compelling business value narratives, cultivating an overall innovative, credible, and forward-thinking brand perception through its digital experience. |  | Website feels like a standard B2B SaaS site, with limited specific effort to structurally or stylistically showcase its technological depth or innovation, even if these are claimed as differentiators. Technical content, if present, may be hard to find, not well-integrated with business value propositions, or not presented in a manner (e.g., via dedicated 'Technology' or 'Research' sections) that builds strong credibility as a tech leader. | The digital experience does not project an identity of technological leadership or innovation, even if this is a core part of the company's value proposition. The website structure and content presentation are generic, outdated, or fail to build confidence in the company's specific technical capabilities or forward vision; lacks dedicated sections for deeper tech insights or innovation showcases. |
+| **Technology Leadership & Innovation Showcase (Presentation & IA)** | Website structure and content presentation strongly reflect best practices of leading technology-innovative companies relevant to their sector. This includes a dedicated, easily discoverable, and prominently featured section (e.g., 'Our Technology,' 'Innovation Insights,' 'R\&D Highlights,' 'Engineering Blog,' or 'Research Portal' – distinct from simply a general blog) that effectively showcases expertise, future vision, and the depth of their technological approach. The company successfully blends deep technical content (where appropriate for specific audiences, e.g., data sheets, architectural diagrams) with clear, compelling business value narratives, cultivating an overall innovative, credible, and forward-thinking brand perception through its digital experience. |  | Website feels like a standard B2B SaaS site, with limited specific effort to structurally or stylistically showcase its technological depth or innovation, even if these are claimed as differentiators. Technical content, if present, may be hard to find, not well-integrated with business value propositions, or not presented in a manner (e.g., via dedicated 'Technology' or 'Research' sections) that builds strong credibility as a tech leader. | The digital experience does not project an identity of technological leadership or innovation, even if this is a core part of the company's value proposition. The website structure and content presentation are generic, outdated, or fail to build confidence in the company's specific technical capabilities or forward vision; lacks dedicated sections for deeper tech insights or innovation showcases. |
 | **Business Outcome Focus** | Recommendations directly tied to revenue, growth, or competitive metrics | Some connection to business outcomes but not fully quantified | Focus on activities rather than outcomes | No clear business impact articulated |
 | **Specificity & Actionability** | Detailed, specific actions with clear ownership and timeline | Generally clear actions but some ambiguity in execution | Vague directives without clear next steps | Generic suggestions with no implementation path |
 | **Resource Calibration** | Accurately scoped for company size and stage with realistic resource needs | Generally appropriate resource requirements | Some recommendations exceed realistic capabilities | Recommendations require unreasonable resources |
@@ -425,14 +425,14 @@ Below is an example showing how to document findings using the cross-referencing
 
 **Affects These Dimensions:**
 
-- **Market Positioning: CRITICAL** - Homepage messaging fails to articulate unique value  
-- **Competitive Positioning: HIGH** - No clear distinction from alternatives  
-- **Brand Consistency: MEDIUM** - Inconsistent value articulation across channels  
-- **Buyer Journey: MEDIUM** - Weak motivation to progress through funnel
+- **Market Positioning: CRITICAL** \- Homepage messaging fails to articulate unique value  
+- **Competitive Positioning: HIGH** \- No clear distinction from alternatives  
+- **Brand Consistency: MEDIUM** \- Inconsistent value articulation across channels  
+- **Buyer Journey: MEDIUM** \- Weak motivation to progress through funnel
 
 **Supporting Evidence:**
 
-- "We help businesses improve productivity" [Homepage: https://example.com]  
+- "We help businesses improve productivity" \[Homepage: https://example.com\]  
 - Competitor X, Y, and Z all use similar generic claims  
 - No quantified outcomes or customer-specific benefits
 
@@ -444,14 +444,14 @@ Below is an example showing how to document findings using the cross-referencing
 
 **Strengths:**
 
-* Pain points are clearly articulated using customer language: "We understand that manual reporting costs you 15 hours per week" — [Homepage: https://example.com]  
-* Category is clearly defined as "Revenue Intelligence Platform" — [Product page: https://example.com/product]
+* Pain points are clearly articulated using customer language: "We understand that manual reporting costs you 15 hours per week" — \[Homepage: https://example.com\]  
+* Category is clearly defined as "Revenue Intelligence Platform" — \[Product page: https://example.com/product\]
 
 **Opportunities:**
 
 * Value proposition lacks differentiation (Manifestation of Generic Value Proposition root cause)  
-* No quantified ROI or business impact metrics provided — [Pricing page: https://example.com/pricing]  
-* Competitive alternatives not acknowledged or addressed — [All pages reviewed]
+* No quantified ROI or business impact metrics provided — \[Pricing page: https://example.com/pricing\]  
+* Competitive alternatives not acknowledged or addressed — \[All pages reviewed\]
 
 This interconnected documentation approach eliminates redundancy while maintaining comprehensive analysis.
 
@@ -494,18 +494,18 @@ Each root cause analysis should include a visual representation that maps sympto
 
 Use consistent visual indicators for severity levels:
 
-* **Critical:** Red (#E53935) - Requires immediate attention  
-* **High:** Orange (#FB8C00) - Significant business impact  
-* **Medium:** Yellow (#FFD600) - Notable but not urgent  
-* **Low:** Green (#43A047) - Minimal business impact
+* **Critical:** Red (\#E53935) \- Requires immediate attention  
+* **High:** Orange (\#FB8C00) \- Significant business impact  
+* **Medium:** Yellow (\#FFD600) \- Notable but not urgent  
+* **Low:** Green (\#43A047) \- Minimal business impact
 
 ## Relationship Type Indicators
 
 Use these visual indicators for different types of relationships:
 
-* **Causal:** Solid arrows (➡️) - Direct cause-effect relationship  
-* **Dependency:** Chain link symbol (⛓️) - Cannot fix one until the other is addressed  
-* **Bidirectional:** Circular arrows (🔄) - Mutually reinforcing issues
+* **Causal:** Solid arrows (➡️) \- Direct cause-effect relationship  
+* **Dependency:** Chain link symbol (⛓️) \- Cannot fix one until the other is addressed  
+* **Bidirectional:** Circular arrows (🔄) \- Mutually reinforcing issues
 
 ## Implementation Priority Matrix Visualization
 
@@ -522,9 +522,9 @@ The 2x2 priority matrix should use:
 
 For comprehensive marketing analysis, use this rubric document in conjunction with:
 
-1. [**Marketing Analysis Methodology**](https://docs.google.com/document/d/1dN81jf00NiCctWZDjgrxdWt_YTe9sGUHDAFjbM8gI-8/edit?usp=sharing) - [Marketing Analysis Methodology v2](https://docs.google.com/document/d/1dN81jf00NiCctWZDjgrxdWt_YTe9sGUHDAFjbM8gI-8/edit?usp=sharing)  The core process and structure for conducting marketing analysis  
-2. [**Strategic Elements Framework**](https://docs.google.com/document/d/1MYvpMb2f4pgZQGQb4m7WFPvRpOnDJL8dWcZ-bEN2gHA/edit?usp=sharing) - [Strategic_Elements_Framework](https://docs.google.com/document/d/1MYvpMb2f4pgZQGQb4m7WFPvRpOnDJL8dWcZ-bEN2gHA/edit?usp=sharing) Detailed guidance for evaluating strategic marketing opportunities that may span multiple dimensions  
-3. [**INSTRUCT_MARKETING_ANALYSIS**](https://docs.google.com/document/d/19u8OCt-uchJbxEFJN1C_n92ABIyuGTE26EJgdOfYIao/edit?usp=sharing) - [Instruct_Marketing_Analysis](https://docs.google.com/document/d/19u8OCt-uchJbxEFJN1C_n92ABIyuGTE26EJgdOfYIao/edit?usp=sharing) Implementation instructions for performing analysis
+1. [**Marketing Analysis Methodology**](https://docs.google.com/document/d/1dN81jf00NiCctWZDjgrxdWt_YTe9sGUHDAFjbM8gI-8/edit?usp=sharing) \- [Marketing Analysis Methodology v2](https://docs.google.com/document/d/1dN81jf00NiCctWZDjgrxdWt_YTe9sGUHDAFjbM8gI-8/edit?usp=sharing)  The core process and structure for conducting marketing analysis  
+2. [**Strategic Elements Framework**](https://docs.google.com/document/d/1MYvpMb2f4pgZQGQb4m7WFPvRpOnDJL8dWcZ-bEN2gHA/edit?usp=sharing) \- [Strategic\_Elements\_Framework](https://docs.google.com/document/d/1MYvpMb2f4pgZQGQb4m7WFPvRpOnDJL8dWcZ-bEN2gHA/edit?usp=sharing) Detailed guidance for evaluating strategic marketing opportunities that may span multiple dimensions  
+3. [**INSTRUCT\_MARKETING\_ANALYSIS**](https://docs.google.com/document/d/19u8OCt-uchJbxEFJN1C_n92ABIyuGTE26EJgdOfYIao/edit?usp=sharing) \- [Instruct\_Marketing\_Analysis](https://docs.google.com/document/d/19u8OCt-uchJbxEFJN1C_n92ABIyuGTE26EJgdOfYIao/edit?usp=sharing) Implementation instructions for performing analysis
 
 The [Strategic Elements Framework](https://docs.google.com/document/d/1MYvpMb2f4pgZQGQb4m7WFPvRpOnDJL8dWcZ-bEN2gHA/edit?usp=sharing) document is particularly important for identifying cross-dimensional strategic opportunities that might otherwise be missed when evaluating individual dimensions. Apply the framework between Steps 3 (Dimension Evaluation) and 4 (Root Cause Identification) to ensure critical strategic insights are preserved.
 

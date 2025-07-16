@@ -61,15 +61,15 @@ Each finding in this methodology exists at multiple levels. What appears as a sy
 
 # Section 1: Evidence Collection Protocol
 
-While the user-provided 'Deep Research Brief' (DRB) offers invaluable strategic direction, interpretations (potentially stemming from a prior 'Technical Pre-Analysis Report'), and hypotheses, MEARA's Evidence Collection Protocol (detailed in STEP 2) MUST still be thoroughly and independently executed. The aim is to:  
-* Validate, verify, update, or challenge the findings and hypotheses presented in the DRB using the most current information available.  
-* Gather fresh, direct, and citable evidence from primary sources for all dimensions and rubric elements.  
-* Ensure the entire Marketing Effectiveness Analysis is based on MEARA's own current investigation, with all report examples and findings attributable to this direct research.  
-The DRB guides *where* to look and *what* to look for; MEARA's protocol is about *gathering the actual evidence* for its analysis.
+While the user-provided 'Deep Research Brief' (DRB) offers invaluable strategic direction, interpretations (potentially stemming from a prior 'Technical Pre-Analysis Report'), and hypotheses, MEARA's Evidence Collection Protocol (detailed in STEP 2\) MUST still be thoroughly and independently executed. The aim is to:  
+\* Validate, verify, update, or challenge the findings and hypotheses presented in the DRB using the most current information available.  
+\* Gather fresh, direct, and citable evidence from primary sources for all dimensions and rubric elements.  
+\* Ensure the entire Marketing Effectiveness Analysis is based on MEARA's own current investigation, with all report examples and findings attributable to this direct research.  
+The DRB guides \*where\* to look and \*what\* to look for; MEARA's protocol is about \*gathering the actual evidence\* for its analysis.
 
 **Objective:** Systematically gather digital signals to enable partially automated marketing assessments.
 
-#### **1. Digital Assets to Audit**
+#### **1\. Digital Assets to Audit**
 
 * Company homepage  
 * Product pages  
@@ -83,47 +83,47 @@ The DRB guides *where* to look and *what* to look for; MEARA's protocol is about
 * Google search results for brand terms  
 * Organic and paid search results for relevant keywords  
 * Competitor websites and messaging comparisons  
-* Company's past major marketing campaigns, product launches, or initiatives (if discoverable through news archives, company blog history, social media history, or internet archive tools) to identify specific, named, previously successful but potentially underleveraged assets, learnings, or strong positive sentiment ('hidden gems') (e.g., a well-received [generic type of event like 'annual user conference'], a highly praised [generic type of content like 'webinar series on future of X industry'] from a previous year, a pivotal early [generic type of social proof like 'customer success story with a recognized industry leader'] no longer prominently featured, or a specific product feature that received outsized positive feedback but is now de-emphasized).  
+* Company's past major marketing campaigns, product launches, or initiatives (if discoverable through news archives, company blog history, social media history, or internet archive tools) to identify specific, named, previously successful but potentially underleveraged assets, learnings, or strong positive sentiment ('hidden gems') (e.g., a well-received \[generic type of event like 'annual user conference'\], a highly praised \[generic type of content like 'webinar series on future of X industry'\] from a previous year, a pivotal early \[generic type of social proof like 'customer success story with a recognized industry leader'\] no longer prominently featured, or a specific product feature that received outsized positive feedback but is now de-emphasized).  
 * Competitor advertising landing pages and ad copy (where discoverable through search, ad libraries if accessible, or by observing ads on relevant keywords).
 
-#### **2. Recommended Search Queries**
+#### **2\. Recommended Search Queries**
 
-* "[company name] site:g2.com"  
-* "[company name] pricing"  
-* "[company name] use cases"  
-* "[company name] + category + Gartner / Forrester"  
-* "[company name] site:linkedin.com"  
-* "[company name] case studies"  
-* "[company name] customer stories"  
-* "[category] software comparison"  
-* "[company name] + pain point keywords"  
-* "[company name] + AI + use case"  
-* "[competitor A] vs [competitor B] advertising"  
-* "keywords [competitor A] targets" or "competitor A ad copy examples"  
-* "[company name] notable past marketing campaigns"  
-* "[company name] 'Legal Week'" (Replace 'Legal Week' with any known specific past initiative or event as applicable, or use generic terms like "major event sponsorship")  
-* "competitors of [company name] bidding on branded terms"  
-* "Perform direct searches for '[company name]' on Google (and other locally dominant search engines for their target market) and meticulously note if any competitor advertisements appear directly on the first page of the brand SERP. Document which competitors, if any, are running these ads."  
-* "[company name] AI overview"  
-* "AI recommendations for [product category] software"  
-* "best AI tools for [problem company solves]"  
-* "[company name] 'hidden gems' past success" (as a conceptual query to guide broader historical searches beyond just named initiatives)  
-* "what are common objections to [product category/solution type] software?" (to help identify potential internal detractor arguments)
+* "\[company name\] site:g2.com"  
+* "\[company name\] pricing"  
+* "\[company name\] use cases"  
+* "\[company name\] \+ category \+ Gartner / Forrester"  
+* "\[company name\] site:linkedin.com"  
+* "\[company name\] case studies"  
+* "\[company name\] customer stories"  
+* "\[category\] software comparison"  
+* "\[company name\] \+ pain point keywords"  
+* "\[company name\] \+ AI \+ use case"  
+* "\[competitor A\] vs \[competitor B\] advertising"  
+* "keywords \[competitor A\] targets" or "competitor A ad copy examples"  
+* "\[company name\] notable past marketing campaigns"  
+* "\[company name\] 'Legal Week'" (Replace 'Legal Week' with any known specific past initiative or event as applicable, or use generic terms like "major event sponsorship")  
+* "competitors of \[company name\] bidding on branded terms"  
+* "Perform direct searches for '\[company name\]' on Google (and other locally dominant search engines for their target market) and meticulously note if any competitor advertisements appear directly on the first page of the brand SERP. Document which competitors, if any, are running these ads."  
+* "\[company name\] AI overview"  
+* "AI recommendations for \[product category\] software"  
+* "best AI tools for \[problem company solves\]"  
+* "\[company name\] 'hidden gems' past success" (as a conceptual query to guide broader historical searches beyond just named initiatives)  
+* "what are common objections to \[product category/solution type\] software?" (to help identify potential internal detractor arguments)
 
-#### **3. AI Prompt Templates for Artifact Analysis**
+#### **3\. AI Prompt Templates for Artifact Analysis**
 
 * **Homepage Analysis**: "What is the primary value proposition communicated on this homepage? Is it clear who the target audience is and what pain point is being solved?"  
 * **CTA Strength**: "Assess the strength and placement of CTAs on this page. Are they aligned with buyer intent levels and clear in their wording?"  
-* **Tone & Voice Audit**: "Describe the tone and voice of the brand based on this page. Is it consistent with B2B SaaS best practices for [target persona]?"  
-* **G2 Review Synthesis**: "Summarize common themes in G2 reviews for [company]. What are perceived strengths and areas for improvement?"  
-* **Competitive Messaging Compare**: "Compare the messaging of [company] with [competitor]. What are the major similarities and points of differentiation?"  
+* **Tone & Voice Audit**: "Describe the tone and voice of the brand based on this page. Is it consistent with B2B SaaS best practices for \[target persona\]?"  
+* **G2 Review Synthesis**: "Summarize common themes in G2 reviews for \[company\]. What are perceived strengths and areas for improvement?"  
+* **Competitive Messaging Compare**: "Compare the messaging of \[company\] with \[competitor\]. What are the major similarities and points of differentiation?"  
 * **Category Definition Check**: "Does the website clearly define the product category they play in? If so, what terminology do they use to frame it?"  
-* **Competitive Ad Analysis Prompt**: "Analyze the visible advertising messages of key competitors [competitor A] and [competitor B]. Crucially, are any competitor ads appearing directly on searches for '[company name]'s' primary branded keywords on the first page of search results? If so, identify which competitors are advertising and capture the nature of their ad copy. What are their primary value propositions in ads generally, and what CTAs are they using? If no competitor ads are found on branded terms after checking, explicitly state this finding."  
-* **Historical Asset Review Prompt**: “Review archived news, blog posts, social media (e.g., LinkedIn, Twitter/X company posts from the last 1-2 years), and website archives for [company name]. Identify any specific, named marketing initiatives, events (e.g., a specific trade show participation like '[generic example: IndustryCon Global 2023]', a particular webinar series like '[generic example: The Monthly X Insights Series]'), product launches, or unique company achievements that demonstrably received positive engagement or were highlighted as successes at the time but appear to be underleveraged, 'buried,' or no longer prominent in current primary marketing materials. Explicitly document any such specific initiative/asset found and any evidence of its past prominence or success. If none are found after a reasonable search, note that as well.”  
-* AEO & AI Recommendation Analysis Prompt: 'Based on AI engine search results (e.g., Google AI Overviews, Perplexity) for key category terms, how is [company name] and its competitors positioned or recommended? What specific content strengths or weaknesses appear to influence these AI-generated summaries? What actions could improve [company name]'s AEO and likelihood of positive AI recommendation?'  
-* Internal Detractor Messaging Prompt: 'Review [company name]'s messaging (website, key content). Does it proactively address or provide counter-arguments for potential internal objections or concerns that stakeholders within a buying organization might have (e.g., job displacement, implementation difficulty, integration challenges, perceived high cost, data security for AI products)? Are there resources for internal champions to navigate these detractor points? If not, what are the gaps?'  
-* Early-Stage Engagement & Lead Capture Variety Prompt: 'Analyze the lead capture mechanisms on [company name]'s website. Beyond high-commitment CTAs like 'Request a Demo,' what lower-friction options are available for early-stage prospects (e.g., newsletter, resource downloads, webinar sign-ups, free tools, community access)? How prominent and accessible are these options?'  
-* AI-Native Authenticity Prompt: 'Evaluate [company name]'s overall digital presence. Beyond keywords, does the site's design, user experience, information architecture (e.g., presence of 'Research' or 'Technology' sections), and content style convey an authentic AI-native feel? What specific elements contribute to or detract from this perception?'
+* **Competitive Ad Analysis Prompt**: "Analyze the visible advertising messages of key competitors \[competitor A\] and \[competitor B\]. Crucially, are any competitor ads appearing directly on searches for '\[company name\]'s' primary branded keywords on the first page of search results? If so, identify which competitors are advertising and capture the nature of their ad copy. What are their primary value propositions in ads generally, and what CTAs are they using? If no competitor ads are found on branded terms after checking, explicitly state this finding."  
+* **Historical Asset Review Prompt**: “Review archived news, blog posts, social media (e.g., LinkedIn, Twitter/X company posts from the last 1-2 years), and website archives for \[company name\]. Identify any specific, named marketing initiatives, events (e.g., a specific trade show participation like '\[generic example: IndustryCon Global 2023\]', a particular webinar series like '\[generic example: The Monthly X Insights Series\]'), product launches, or unique company achievements that demonstrably received positive engagement or were highlighted as successes at the time but appear to be underleveraged, 'buried,' or no longer prominent in current primary marketing materials. Explicitly document any such specific initiative/asset found and any evidence of its past prominence or success. If none are found after a reasonable search, note that as well.”  
+* AEO & AI Recommendation Analysis Prompt: 'Based on AI engine search results (e.g., Google AI Overviews, Perplexity) for key category terms, how is \[company name\] and its competitors positioned or recommended? What specific content strengths or weaknesses appear to influence these AI-generated summaries? What actions could improve \[company name\]'s AEO and likelihood of positive AI recommendation?'  
+* Internal Detractor Messaging Prompt: 'Review \[company name\]'s messaging (website, key content). Does it proactively address or provide counter-arguments for potential internal objections or concerns that stakeholders within a buying organization might have (e.g., job displacement, implementation difficulty, integration challenges, perceived high cost, data security for AI products)? Are there resources for internal champions to navigate these detractor points? If not, what are the gaps?'  
+* Early-Stage Engagement & Lead Capture Variety Prompt: 'Analyze the lead capture mechanisms on \[company name\]'s website. Beyond high-commitment CTAs like 'Request a Demo,' what lower-friction options are available for early-stage prospects (e.g., newsletter, resource downloads, webinar sign-ups, free tools, community access)? How prominent and accessible are these options?'  
+* AI-Native Authenticity Prompt: 'Evaluate \[company name\]'s overall digital presence. Beyond keywords, does the site's design, user experience, information architecture (e.g., presence of 'Research' or 'Technology' sections), and content style convey an authentic AI-native feel? What specific elements contribute to or detract from this perception?'
 
 
 # Section 2: Root Cause Analysis Framework
@@ -199,11 +199,11 @@ For each identified root cause:
 
 Format as:
 
-**Root Cause:** [Title] **Description:** [Explanation] **Cross-Dimensional Impact:**
+**Root Cause:** \[Title\] **Description:** \[Explanation\] **Cross-Dimensional Impact:**
 
-- **Dimension 1:** [Impact level] - [Brief description of manifestation]  
-- **Dimension 4:** [Impact level] - [Brief description of manifestation]  
-- **Dimension 6:** [Impact level] - [Brief description of manifestation]
+- **Dimension 1:** \[Impact level\] \- \[Brief description of manifestation\]  
+- **Dimension 4:** \[Impact level\] \- \[Brief description of manifestation\]  
+- **Dimension 6:** \[Impact level\] \- \[Brief description of manifestation\]
 
 ## Step 6: Prioritize by Business Impact
 
@@ -228,7 +228,7 @@ The user-provided "Deep Research Brief" is a primary source for identifying pote
 
 Every marketing analysis must explicitly evaluate whether these fundamental strategic opportunities exist:
 
-### 1. Category Definition & Leadership
+### 1\. Category Definition & Leadership
 
 * **Assessment Focus:** Evaluate if the company can create, own, redefine, or lead a category  
 * **Key Questions:**  
@@ -240,7 +240,7 @@ Every marketing analysis must explicitly evaluate whether these fundamental stra
   * "Revenue Intelligence" rather than "Sales Analytics"  
   * "Experience Management" rather than "Customer Satisfaction"
 
-### 2. Competitive Positioning & Defense
+### 2\. Competitive Positioning & Defense
 
 * **Assessment Focus:** Evaluate unique competitive dynamics and required defensive strategies  
 * **Key Questions:**  
@@ -252,7 +252,7 @@ Every marketing analysis must explicitly evaluate whether these fundamental stra
   * Creating direct comparison content against main competitors  
   * Developing counter-messaging to address competitor claims
 
-### 3. Underleveraged Past Successes
+### 3\. Underleveraged Past Successes
 
 * **Assessment Focus:** Identify successful past initiatives, content, or events not currently maximized  
 * **Key Questions:**  
@@ -264,7 +264,7 @@ Every marketing analysis must explicitly evaluate whether these fundamental stra
   * Resurfacing and updating popular historical content  
   * Featuring previously successful customer case studies more prominently
 
-### 4. Urgency Creation & "Why Now" Messaging
+### 4\. Urgency Creation & "Why Now" Messaging
 
 * **Assessment Focus:** Evaluate the effectiveness of status quo disruption and urgency drivers  
 * **Key Questions:**  
@@ -276,7 +276,7 @@ Every marketing analysis must explicitly evaluate whether these fundamental stra
   * Highlighting costs of delay or first-mover advantages  
   * Leveraging market changes or compliance deadlines
 
-### 5. Buying Committee Dynamics
+### 5\. Buying Committee Dynamics
 
 * **Assessment Focus:** Evaluate coverage of all key stakeholders in the buying process  
 * **Key Questions:**  
@@ -288,7 +288,7 @@ Every marketing analysis must explicitly evaluate whether these fundamental stra
   * Developing content that addresses internal objections  
   * Building champion toolkits for internal evangelism
 
-### 6. Technology Positioning Authenticity
+### 6\. Technology Positioning Authenticity
 
 * **Assessment Focus:** For technology companies, evaluate if tech positioning is authentic and substantive  
 * **Key Questions:**  
@@ -306,8 +306,8 @@ During the root cause identification phase:
 
 1. **Explicit Evaluation:** Systematically assess whether each strategic element represents an opportunity or issue  
 2. **Documentation:** For each element, document one of the following:  
-   * "Significant Opportunity in [Element]" with supporting evidence  
-   * "No Significant Opportunity in [Element]" with explanation  
+   * "Significant Opportunity in \[Element\]" with supporting evidence  
+   * "No Significant Opportunity in \[Element\]" with explanation  
 3. **Cross-Reference:** Link identified opportunities to appropriate root causes and dimensions  
 4. **Preservation:** Ensure these strategic elements are not lost during consolidation or cross-referencing
 
@@ -317,14 +317,14 @@ Use this table during analysis to ensure comprehensive coverage:
 
 | Strategic Element | Opportunity Exists? | Supporting Evidence | Related Root Cause |
 | :---- | :---- | :---- | :---- |
-| Category Definition | Yes/No | [Evidence] | [Root Cause Name] |
-| Competitive Positioning | Yes/No | [Evidence] | [Root Cause Name] |
-| Underleveraged Successes | Yes/No | [Evidence] | [Root Cause Name] |
-| Urgency Creation | Yes/No | [Evidence] | [Root Cause Name] |
-| Buying Committee | Yes/No | [Evidence] | [Root Cause Name] |
-| Technology Positioning | Yes/No | [Evidence] | [Root Cause Name] |
+| Category Definition | Yes/No | \[Evidence\] | \[Root Cause Name\] |
+| Competitive Positioning | Yes/No | \[Evidence\] | \[Root Cause Name\] |
+| Underleveraged Successes | Yes/No | \[Evidence\] | \[Root Cause Name\] |
+| Urgency Creation | Yes/No | \[Evidence\] | \[Root Cause Name\] |
+| Buying Committee | Yes/No | \[Evidence\] | \[Root Cause Name\] |
+| Technology Positioning | Yes/No | \[Evidence\] | \[Root Cause Name\] |
 
-This strategic elements verification should be conducted after the initial dimension evaluation (Step 3) and before final root cause identification (Step 4) to ensure no strategic opportunities are missed.
+This strategic elements verification should be conducted after the initial dimension evaluation (Step 3\) and before final root cause identification (Step 4\) to ensure no strategic opportunities are missed.
 
 ---
 
@@ -421,12 +421,12 @@ The Findings Relationship Map serves multiple strategic functions:
 
 #### Simple 3-Root Cause Network Example:
 
-[ROOT CAUSE 1] ---- Critical ----→ [Dimension 1 Finding] ↓  
+\[ROOT CAUSE 1\] \---- Critical \----→ \[Dimension 1 Finding\] ↓  
  High Impact  
  ↓  
- [Dimension 4 Finding] ←--- Medium --- [ROOT CAUSE 2] ↑ ↑  
+ \[Dimension 4 Finding\] ←--- Medium \--- \[ROOT CAUSE 2\] ↑ ↑  
  Low Impact High Impact  
- ↑ ↑ [Dimension 7 Finding] ←--- Critical --- [ROOT CAUSE 3]
+ ↑ ↑ \[Dimension 7 Finding\] ←--- Critical \--- \[ROOT CAUSE 3\]
 
 This visualization should be created for every analysis as part of the Executive Layer to guide stakeholders through the interconnected nature of marketing issues before diving into detailed findings.
 
@@ -440,24 +440,24 @@ This template ensures outputs are structured for diagnostic clarity and actionab
 
 ## Executive Layer (For All Stakeholders)
 
-#### **1. Executive Summary**
+#### **1\. Executive Summary**
 
 * 3–5 high-value, low-effort recommendations.  
 * Each finding tied to a specific symptom, rubric area, or digital artifact.  
 * Format:  
-  * **Key finding**: [Opportunity]. As evidenced by: "[Quote]" [Source: URL or asset name]. **Quick Win:** [Specific, actionable, and direct immediate action to address, e.g., for a B2B SaaS company lacking reviews: 'Establish a G2 Profile and launch an initial review collection campaign.' or for unclear homepage messaging: 'Rewrite homepage H1 to state [specific value proposition for ICP].'].
+  * **Key finding**: \[Opportunity\]. As evidenced by: "\[Quote\]" \[Source: URL or asset name\]. **Quick Win:** \[Specific, actionable, and direct immediate action to address, e.g., for a B2B SaaS company lacking reviews: 'Establish a G2 Profile and launch an initial review collection campaign.' or for unclear homepage messaging: 'Rewrite homepage H1 to state \[specific value proposition for ICP\].'\].
 
-#### **2. Critical Issues Summary**
+#### **2\. Critical Issues Summary**
 
 * Focus on the 3 most urgent marketing issues:  
 * Format:  
-  * **Critical Issue #[Number]:** [Revenue/Growth Impact: estimate] Clear statement of business problem  
+  * **Critical Issue \#\[Number\]:** \[Revenue/Growth Impact: estimate\] Clear statement of business problem  
   * **Root Diagnosis:** One-sentence explanation of the underlying cause  
-  * **Evidence:** "Direct quote from source" [Source: URL] plus additional context if needed  
-  * **Quick Win Solution:** [30-day fix]  
-  * **Strategic Solution:** [Long-term approach]
+  * **Evidence:** "Direct quote from source" \[Source: URL\] plus additional context if needed  
+  * **Quick Win Solution:** \[30-day fix\]  
+  * **Strategic Solution:** \[Long-term approach\]
 
-#### **3. Findings Relationship Map**
+#### **3\. Findings Relationship Map**
 
 * Visual representation showing:  
   * 3-5 root causes as central nodes  
@@ -466,21 +466,21 @@ This template ensures outputs are structured for diagnostic clarity and actionab
   * Interconnections between findings  
 * Include brief legend explaining visualization
 
-#### **4. Implementation Priority Matrix**
+#### **4\. Implementation Priority Matrix**
 
 * Four-quadrant 2x2 matrix with recommendations organized by impact and effort:
 
 | High Impact, Low Effort | High Impact, High Effort |
 | :---- | :---- |
-| - [Quick Win] | - [Strategic Initiative] |
+| \- \[Quick Win\] | \- \[Strategic Initiative\] |
 
 | Low Impact, Low Effort | Low Impact, High Effort |
 | :---- | :---- |
-| - [Minor Fix] | - [Avoid or Defer] |
+| \- \[Minor Fix\] | \- \[Avoid or Defer\] |
 
 ## Strategic Layer (For Marketing Leaders)
 
-#### **5. Initial Findings by Dimension**
+#### **5\. Initial Findings by Dimension**
 
 * Concise overview of strengths and opportunities across all dimensions:  
   * Market Positioning & Messaging  
@@ -492,35 +492,35 @@ This template ensures outputs are structured for diagnostic clarity and actionab
   * Brand & Message Consistency  
   * Analytics & Measurement Framework  
 * Format:  
-  * **[Dimension Name]**  
-    * **Strength**: [Detail]. For example: "[Quote]" [Source]  
-    * **Opportunity**: [Detail]. For example: "[Quote]" [Source]  
-  * For findings connected to a root cause: **Opportunity**: [Detail] (Manifestation of [Root Cause Name])
+  * **\[Dimension Name\]**  
+    * **Strength**: \[Detail\]. For example: "\[Quote\]" \[Source\]  
+    * **Opportunity**: \[Detail\]. For example: "\[Quote\]" \[Source\]  
+  * For findings connected to a root cause: **Opportunity**: \[Detail\] (Manifestation of \[Root Cause Name\])
 
-#### **6. Root Cause Analysis**
+#### **6\. Root Cause Analysis**
 
 * Cluster 3–5 strategic root causes based on recurring issues.  
 * For each:  
-  * **Root Cause**: [Title]  
-  * **Description**: [Explanation of cause and impact]  
+  * **Root Cause**: \[Title\]  
+  * **Description**: \[Explanation of cause and impact\]  
   * **Affects These Dimensions**:  
-    * **Dimension 1**: [Impact level] - [Brief manifestation description]  
-    * **Dimension 4**: [Impact level] - [Brief manifestation description]  
+    * **Dimension 1**: \[Impact level\] \- \[Brief manifestation description\]  
+    * **Dimension 4**: \[Impact level\] \- \[Brief manifestation description\]  
   * **Supporting Evidence**: List from rubric findings and content reviews  
-  * **Business Implications**: [Detail risks if unaddressed]
+  * **Business Implications**: \[Detail risks if unaddressed\]
 
-#### **7. Strategic Recommendations**
+#### **7\. Strategic Recommendations**
 
 * 4–6 prioritized strategic recommendations  
 * For each:  
-  * **Recommendation**: [What to change]  
-  * **Addresses Root Cause(s)**: [List relevant root causes]  
-  * **Improves Dimensions**: [List dimensions that will be improved]  
-  * **Rationale**: [Why it's needed, tied to findings]  
-  * **Implementation Steps**: [How to execute, including team/owner]  
-  * **Supporting Evidence**: [Relevant quotes/observations]
+  * **Recommendation**: \[What to change\]  
+  * **Addresses Root Cause(s)**: \[List relevant root causes\]  
+  * **Improves Dimensions**: \[List dimensions that will be improved\]  
+  * **Rationale**: \[Why it's needed, tied to findings\]  
+  * **Implementation Steps**: \[How to execute, including team/owner\]  
+  * **Supporting Evidence**: \[Relevant quotes/observations\]
 
-#### **8. Phased Implementation Plan**
+#### **8\. Phased Implementation Plan**
 
 * **Phase 1**: Signal Collection & Symptom Scoring (Weeks 1–2)  
 * **Phase 2**: Messaging, ICP & CTA Optimization (Weeks 3–6)  
@@ -534,16 +534,16 @@ Each phase should include:
 * Dependencies and handoffs  
 * At least one supporting evidence citation per phase
 
-## Tactical Layer (Optional - On Request)
+## Tactical Layer (Optional \- On Request)
 
-#### **9. Detailed Dimension Analysis Tables**
+#### **9\. Detailed Dimension Analysis Tables**
 
 * Complete tables for all eight dimensions following this structure:
 
 | Element | Rating | Strengths | Opportunities | Examples |
 | :---- | :---- | :---- | :---- | :---- |
-| Value Proposition Clarity | Competent | Clear benefit statement on homepage | Limited differentiation from competitors | "Quote" [Source] |
-| Pain Point Articulation | Needs Work | Some pain points mentioned | Not quantified or customer-voiced | "Quote" [Source] |
+| Value Proposition Clarity | Competent | Clear benefit statement on homepage | Limited differentiation from competitors | "Quote" \[Source\] |
+| Pain Point Articulation | Needs Work | Some pain points mentioned | Not quantified or customer-voiced | "Quote" \[Source\] |
 
 * Detailed implementation instructions for each recommendation  
 * Specific measurement criteria for success  
@@ -559,7 +559,7 @@ Each phase should include:
 
 This framework organizes marketing analysis into three distinct layers, allowing stakeholders to engage at their preferred level of detail:
 
-### 1. Executive Layer (Required for All Reports)
+### 1\. Executive Layer (Required for All Reports)
 
 * **Primary Audience:** C-suite, investors, busy executives  
 * **Key Components:**  
@@ -573,7 +573,7 @@ This framework organizes marketing analysis into three distinct layers, allowing
   * Highly visual with clear priorities  
   * Maximum 2-3 pages
 
-### 2. Strategic Layer (Required for All Reports)
+### 2\. Strategic Layer (Required for All Reports)
 
 * **Primary Audience:** CMO, marketing leadership, founders  
 * **Key Components:**  
@@ -587,7 +587,7 @@ This framework organizes marketing analysis into three distinct layers, allowing
   * Demonstrates business impact with evidence  
   * 5-7 pages typical length
 
-### 3. Tactical Layer (Optional - Generate on Request)
+### 3\. Tactical Layer (Optional \- Generate on Request)
 
 * **Primary Audience:** Marketing specialists, implementation teams  
 * **Key Components:**  
@@ -622,7 +622,7 @@ This framework organizes marketing analysis into three distinct layers, allowing
 | :---- | :---- |
 | First mention of an issue | Provide full explanation with evidence |
 | Root cause explanation in Root Cause section | Provide complete analysis with all evidence |
-| Manifestation in dimension findings | Brief description + "Manifestation of [Root Cause]" |
+| Manifestation in dimension findings | Brief description \+ "Manifestation of \[Root Cause\]" |
 | Strategic recommendation | Full explanation, with references to root causes addressed |
 | Implementation steps | Detailed instructions without repeating rationale |
 
@@ -630,7 +630,7 @@ This framework organizes marketing analysis into three distinct layers, allowing
 
 **In Dimensional Findings:**
 
-* When an issue stems from a root cause: "Opportunity: [Brief description] (Manifestation of [Root Cause Name])"  
+* When an issue stems from a root cause: "Opportunity: \[Brief description\] (Manifestation of \[Root Cause Name\])"  
 * Example: "Opportunity: Homepage headline lacks specificity (Manifestation of Generic Value Proposition root cause)"
 
 **In Root Cause Analysis:**
@@ -638,8 +638,8 @@ This framework organizes marketing analysis into three distinct layers, allowing
 * List all affected dimensions with concise impact statements  
 * Example:  
   * "Affects These Dimensions:"  
-  * "Market Positioning: CRITICAL - Generic messaging indistinguishable from competitors"  
-  * "Buyer Journey: HIGH - No clear value proposition to drive consideration"
+  * "Market Positioning: CRITICAL \- Generic messaging indistinguishable from competitors"  
+  * "Buyer Journey: HIGH \- No clear value proposition to drive consideration"
 
 **In Strategic Recommendations:**
 
@@ -663,17 +663,17 @@ Root Cause: Generic Value Proposition Description: Messaging lacks specificity a
 
 Affects These Dimensions:
 
-* Market Positioning: CRITICAL - Homepage messaging fails to articulate unique value  
-* Competitive Positioning: HIGH - No clear distinction from alternatives  
-* Brand Consistency: MEDIUM - Inconsistent value articulation across channels  
-* Buyer Journey: MEDIUM - Weak motivation to progress through funnel
+* Market Positioning: CRITICAL \- Homepage messaging fails to articulate unique value  
+* Competitive Positioning: HIGH \- No clear distinction from alternatives  
+* Brand Consistency: MEDIUM \- Inconsistent value articulation across channels  
+* Buyer Journey: MEDIUM \- Weak motivation to progress through funnel
 
 Supporting Evidence:
 
-* "We help businesses improve productivity" [Homepage]  
+* "We help businesses improve productivity" \[Homepage\]  
 * Competitor X, Y, and Z all use similar generic claims
 
-**In Dimension Findings:**
+\*\*In Dimension Findings:\*\*
 
 Market Positioning & Messaging
 
@@ -694,7 +694,7 @@ You're right to clarify. Let's focus on enhancing the steps in Section 4: Method
 
 * **Required Information Sources:**  
   * Company website (homepage, about us, product pages)  
-  * The user-provided "Deep Research Brief for [Company Name]" (DRB): This is a critical foundational input. Recognize that this DRB is a curated output from a "Revelatory Insights Hunter," may have been informed by a prior "Technical Pre-Analysis Report," and contains strategic interpretations, hypotheses (e.g., regarding client-side technical execution, GTM strategy), synthesized insights, and potential "Breakthrough Sparks" or concluding "Strategic Imperatives."  
+  * The user-provided "Deep Research Brief for \[Company Name\]" (DRB): This is a critical foundational input. Recognize that this DRB is a curated output from a "Revelatory Insights Hunter," may have been informed by a prior "Technical Pre-Analysis Report," and contains strategic interpretations, hypotheses (e.g., regarding client-side technical execution, GTM strategy), synthesized insights, and potential "Breakthrough Sparks" or concluding "Strategic Imperatives."  
   * LinkedIn company profile  
   * Recent press releases or media coverage  
   * Industry analyst reports (if available)  
@@ -707,8 +707,8 @@ You're right to clarify. Let's focus on enhancing the steps in Section 4: Method
 
 #### **1.2 Company Profile Capture**
 
-* **Company Name:** [Insert full legal and brand name]  
-* **Website URL:** [Insert primary domain]  
+* **Company Name:** \[Insert full legal and brand name\]  
+* **Website URL:** \[Insert primary domain\]  
 * **Industry/Vertical:** Specific SaaS vertical or business focus (e.g., Fintech, HR Tech, DevOps)  
 * **Stage & Funding History:** Seed, Series A, Growth; list key investors; major funding events  
 * **Headcount & Geography:** Approximate team size; HQ and market locations  
@@ -740,7 +740,7 @@ You're right to clarify. Let's focus on enhancing the steps in Section 4: Method
 #### **1.4 Target Customer Context**
 
 * **Ideal Customer Profile (ICP):** Who is explicitly stated as the buyer? Who is implicitly targeted as the user?  
-* **Customer Size Focus:** SMB, mid-market, enterprise - look for specific signals  
+* **Customer Size Focus:** SMB, mid-market, enterprise \- look for specific signals  
 * **Tech Stack Integrations:** Mentioned key ecosystem partners?  
 * **Pain Points Addressed:** Stated customer challenges or inefficiencies  
 * **Decision Maker vs. User:** Is there clear differentiation between purchase decision-makers and end users?  
@@ -800,14 +800,14 @@ Present your findings in this structured format:
 
 | Section | Observed Information | Source | Confidence Level | Initial Analysis |
 | ----- | ----- | ----- | ----- | ----- |
-| Company Name | [Company name] | [URL or source] | High/Medium/Low | [Initial observations] |
-| Industry | [Industry vertical] | [URL or source] | High/Medium/Low | [Initial observations] |
-| Product Category | [Category claim] | [URL or source] | High/Medium/Low | [Initial observations] |
-| Use Cases | [Primary use cases] | [URL or source] | High/Medium/Low | [Initial observations] |
-| ICP | [Target customer description] | [URL or source] | High/Medium/Low | [Initial observations] |
-| Competitors | [Named competitors] | [URL or source] | High/Medium/Low | [Initial observations] |
-| Pricing | [Pricing approach] | [URL or source] | High/Medium/Low | [Initial observations] |
-| Category | [Market category] | [URL or source] | High/Medium/Low | [Initial observations] |
+| Company Name | \[Company name\] | \[URL or source\] | High/Medium/Low | \[Initial observations\] |
+| Industry | \[Industry vertical\] | \[URL or source\] | High/Medium/Low | \[Initial observations\] |
+| Product Category | \[Category claim\] | \[URL or source\] | High/Medium/Low | \[Initial observations\] |
+| Use Cases | \[Primary use cases\] | \[URL or source\] | High/Medium/Low | \[Initial observations\] |
+| ICP | \[Target customer description\] | \[URL or source\] | High/Medium/Low | \[Initial observations\] |
+| Competitors | \[Named competitors\] | \[URL or source\] | High/Medium/Low | \[Initial observations\] |
+| Pricing | \[Pricing approach\] | \[URL or source\] | High/Medium/Low | \[Initial observations\] |
+| Category | \[Market category\] | \[URL or source\] | High/Medium/Low | \[Initial observations\] |
 
 **Transition to Next Step:** Before proceeding to Step 2, ensure all table fields are complete. For any "Low" confidence ratings, flag them for specific follow-up in the Evidence Collection Protocol. Note potential hypotheses about marketing effectiveness that require validation in later steps.
 
@@ -850,7 +850,7 @@ Present your findings in this structured format:
 
 **Citation Format**
 
-"[Exact quote]" — [Source: URL] (Accessed: [MM/DD/YYYY])
+"\[Exact quote\]" — \[Source: URL\] (Accessed: \[MM/DD/YYYY\])
 
 #### **2.2 Digital Artifact Audit Checklist**
 
@@ -917,14 +917,14 @@ Use insights, hypotheses (e.g., regarding GTM or client-side execution), and ide
 
 Perform these searches:
 
-* "[Company] site:g2.com"  
-* "[Company] customer testimonials"  
-* "[Company] buyer journey content"  
-* "[Company] category positioning"  
-* "[Company] vs [Competitor] software comparison"  
-* "[Company] notable past marketing campaigns" or "[Company] historical achievements"  
-* "competitors of [Company] bidding on [Company] brand"  
-* "[Competitor Name] advertising strategy" (for key competitors)
+* "\[Company\] site:g2.com"  
+* "\[Company\] customer testimonials"  
+* "\[Company\] buyer journey content"  
+* "\[Company\] category positioning"  
+* "\[Company\] vs \[Competitor\] software comparison"  
+* "\[Company\] notable past marketing campaigns" or "\[Company\] historical achievements"  
+* "competitors of \[Company\] bidding on \[Company\] brand"  
+* "\[Competitor Name\] advertising strategy" (for key competitors)
 
 #### **2.4 Prompt Templates for AI-Guided Extraction**
 
@@ -937,8 +937,8 @@ Use these standardized prompt formats:
 * **Tone Assessment**: "What is the tone and brand personality on this page? Does it align with target personas?"  
 * **Testimonial Insights**: "What are the top benefits mentioned by customers in recent G2 reviews?"  
 * **Differentiation Clarity**: "What makes this company different from competitors? Is the positioning clear and ownable?"  
-* **Competitive Ad Exposure Prompt**: "Is there evidence of competitors bidding on [Company]'s branded search terms or running direct comparison ads? If so, what is the nature of these ads?"  
-* **Historical Initiative Review Prompt**: "Based on historical searches (news, blogs, archives), identify any significant past marketing initiatives, product launches, or unique company successes for [Company] that appear to be underemphasized or 'buried' in their current marketing."
+* **Competitive Ad Exposure Prompt**: "Is there evidence of competitors bidding on \[Company\]'s branded search terms or running direct comparison ads? If so, what is the nature of these ads?"  
+* **Historical Initiative Review Prompt**: "Based on historical searches (news, blogs, archives), identify any significant past marketing initiatives, product launches, or unique company successes for \[Company\] that appear to be underemphasized or 'buried' in their current marketing."
 
 #### **2.5 Quality Control and Transition Requirements**
 
@@ -965,9 +965,9 @@ Now, moving on to Step 3:
 
 ### **STEP 3: Dimension Evaluation Using Rubrics**
 
-When assigning ratings and documenting strengths, opportunities, and examples for each rubric element, ensure that supporting evidence is drawn from your direct evidence collection in Step 2. The user-provided Deep Research Brief (DRB) should inform your interpretation and help you identify areas to probe (especially hypotheses regarding technical execution or GTM strategy presented in the DRB), but the cited examples in your rubric tables MUST come from your current investigation.
+When assigning ratings and documenting strengths, opportunities, and examples for each rubric element, ensure that supporting evidence is drawn from your direct evidence collection in Step 2\. The user-provided Deep Research Brief (DRB) should inform your interpretation and help you identify areas to probe (especially hypotheses regarding technical execution or GTM strategy presented in the DRB), but the cited examples in your rubric tables MUST come from your current investigation.
 
-**Note:** Scoring criteria are maintained in the companion document, [Marketing Analysis Rubrics](https://docs.google.com/document/u/0/d/1DkYKqTBL1KN3oAZPxyCpG6j9z7Q2yhtj-Er9sX3cbuc/edit) [marketing rubrics document], which contains full evaluation rubrics for all eight assessment dimensions. Always refer to the latest rubric version when evaluating or interpreting dimension ratings.
+**Note:** Scoring criteria are maintained in the companion document, [Marketing Analysis Rubrics](https://docs.google.com/document/u/0/d/1DkYKqTBL1KN3oAZPxyCpG6j9z7Q2yhtj-Er9sX3cbuc/edit) \[marketing rubrics document\], which contains full evaluation rubrics for all eight assessment dimensions. Always refer to the latest rubric version when evaluating or interpreting dimension ratings.
 
 **Objective:** Translate raw evidence into structured, rubric-aligned assessments for each of the eight marketing effectiveness dimensions.
 
@@ -987,63 +987,63 @@ When assigning ratings and documenting strengths, opportunities, and examples fo
 
 Below is a summary of the eight dimensions evaluated in this analysis. For complete criteria, refer to the [Marketing Analysis Rubrics](https://docs.google.com/document/u/0/d/1DkYKqTBL1KN3oAZPxyCpG6j9z7Q2yhtj-Er9sX3cbuc/edit) document.
 
-**1. Market Positioning & Messaging**
+**1\. Market Positioning & Messaging**
 
 * **Purpose:** Evaluate clarity, distinctiveness, and resonance of the value proposition  
 * **Key Elements:** Value proposition clarity, pain point articulation, differentiation framework, category definition, objection handling, ROI articulation, market education  
 * **Example Exceptional Criteria:** Value proposition is immediately clear, differentiated, and customer-outcome focused  
 * **Example Critical Gap:** Value proposition is absent, confusing, or fundamentally misaligned with market needs
 
-**2. Buyer Journey Orchestration**
+**2\. Buyer Journey Orchestration**
 
 * **Purpose:** Assess full-funnel marketing efforts guiding buyers from awareness to conversion  
 * **Key Elements:** Awareness stage content, consideration stage resources, decision facilitation, engagement diversity, lead capture strategy, buying committee support, nurture & reengagement  
 * **Example Exceptional Criteria:** Rich, diverse content targeted at problem recognition for different personas  
 * **Example Critical Gap:** No dedicated awareness-stage content
 
-**3. Market Presence & Visibility**
+**3\. Market Presence & Visibility**
 
 * **Purpose:** Assess strength of brand footprint, discoverability, and third-party validation signals  
 * **Key Elements:** Search visibility, AI engine optimization, third-party validation, media coverage, social proof diversity, digital footprint, community engagement  
 * **Example Exceptional Criteria:** Dominant rankings for category and problem-based queries with strong third-party validation  
 * **Example Critical Gap:** Poor search visibility even for branded terms with no meaningful social proof
 
-**4. Audience Clarity & Segmentation**
+**4\. Audience Clarity & Segmentation**
 
 * **Purpose:** Evaluate the company's ability to define, segment, and tailor marketing to high-propensity audiences  
 * **Key Elements:** ICP definition, persona depth, segment differentiation, qualification logic, journey mapping by segment, behavioral triggers, role-based engagement  
 * **Example Exceptional Criteria:** Distinct ICPs defined with detailed firmographics, technographics, and JTBD context  
 * **Example Critical Gap:** No clear ICP definition or segmentation visible
 
-**5. Digital Experience Effectiveness**
+**5\. Digital Experience Effectiveness**
 
 * **Purpose:** Assess website clarity, conversion readiness, and experience quality for buyer research  
 * **Key Elements:** Information architecture, conversion path clarity, content layout, page speed, friction in key flows, search functionality, trust signals  
 * **Example Exceptional Criteria:** Clear, intuitive structure with guided flows by persona or use case  
 * **Example Critical Gap:** Navigation confusion, buried pages, broken CTAs
 
-**6. Competitive Positioning & Defense**
+**6\. Competitive Positioning & Defense**
 
 * **Purpose:** Evaluate strength and clarity of product differentiation, market narrative, and brand defense  
 * **Key Elements:** Differentiation clarity, competitive narrative, urgency drivers, win stories, switch incentive strategy, defensive moats, category storytelling  
 * **Example Exceptional Criteria:** Clear, ownable value proposition with contrast to named alternatives  
 * **Example Critical Gap:** Generic messaging undifferentiated from competitors
 
-**7. Brand & Message Consistency**
+**7\. Brand & Message Consistency**
 
 * **Purpose:** Evaluate cross-channel clarity, coherence, and brand identity presence  
 * **Key Elements:** Messaging consistency, visual identity, terminology discipline, voice and tone, brand architecture, channel alignment, brand personality  
 * **Example Exceptional Criteria:** Uniform value proposition and phrasing across all digital surfaces  
 * **Example Critical Gap:** Disjointed, conflicting value propositions or taglines
 
-**8. Analytics & Measurement Framework**
+**8\. Analytics & Measurement Framework**
 
 * **Purpose:** Assess ability to track, interpret, and act on performance metrics across the funnel  
 * **Key Elements:** Core funnel KPIs, attribution strategy, performance feedback loops, goal setting discipline, data accessibility, conversion metrics, investment efficiency  
 * **Example Exceptional Criteria:** All major metrics defined and visible across funnel stages  
 * **Example Critical Gap:** No unified view of funnel metrics
 
-**9. Evaluation of AI-Specific Authenticity**
+**9\. Evaluation of AI-Specific Authenticity**
 
 * **Purpose:** Evaluate how genuinely AI-centric a company's product and marketing approach is, beyond surface-level terminology  
 * **Key Elements:** AI positioning authenticity, technical credibility signals, internal detractor messaging, capability demonstration, development transparency  
@@ -1112,23 +1112,23 @@ Throughout the dimension evaluation process, refer to the following sections in 
 
 Each dimension should be summarized using this format:
 
-### **[Dimension Name]**
+### **\[Dimension Name\]**
 
-**Rating:** [Exceptional / Competent / Needs Work / Critical Gap]
+**Rating:** \[Exceptional / Competent / Needs Work / Critical Gap\]
 
 **Strengths:**
 
-* [List strong practices backed by evidence]  
-* "..." — [Source]
+* \[List strong practices backed by evidence\]  
+* "..." — \[Source\]
 
 **Opportunities:**
 
-* [List gaps, risks, or weak areas]  
-* "..." — [Source]
+* \[List gaps, risks, or weak areas\]  
+* "..." — \[Source\]
 
 **Notes:**
 
-* [Add analytical commentary, contradictions, or context]
+* \[Add analytical commentary, contradictions, or context\]
 
 #### **3.4 Consistency & Calibration**
 
@@ -1225,14 +1225,14 @@ Below is an example of a completed dimension rating for Market Positioning & Mes
 
 **Strengths:**
 
-* Pain points are clearly articulated using customer language: "We understand that manual reporting costs you 15 hours per week" — [Homepage: https://example.com, Accessed: 04/12/2025]  
-* Category is clearly defined as "Revenue Intelligence Platform" — [Product page: https://example.com/product, Accessed: 04/12/2025]
+* Pain points are clearly articulated using customer language: "We understand that manual reporting costs you 15 hours per week" — \[Homepage: https://example.com, Accessed: 04/12/2025\]  
+* Category is clearly defined as "Revenue Intelligence Platform" — \[Product page: https://example.com/product, Accessed: 04/12/2025\]
 
 **Opportunities:**
 
-* Value proposition lacks differentiation: "We help businesses improve productivity" could apply to any software product — [Homepage: https://example.com, Accessed: 04/12/2025]  
-* No quantified ROI or business impact metrics provided — [Pricing page: https://example.com/pricing, Accessed: 04/12/2025]  
-* Competitive alternatives not acknowledged or addressed — [All pages reviewed, Accessed: 04/12/2025]
+* Value proposition lacks differentiation: "We help businesses improve productivity" could apply to any software product — \[Homepage: https://example.com, Accessed: 04/12/2025\]  
+* No quantified ROI or business impact metrics provided — \[Pricing page: https://example.com/pricing, Accessed: 04/12/2025\]  
+* Competitive alternatives not acknowledged or addressed — \[All pages reviewed, Accessed: 04/12/2025\]
 
 **Notes:**
 
@@ -1245,10 +1245,10 @@ Before finalizing dimension ratings, trace each finding to its business impact u
 
 **Impact Tracing Template:**
 
-* **Finding:** [Observation from evidence]  
-* **Business Implication:** [Direct effect on revenue, growth, competitiveness]  
-* **Competitive Disadvantage:** [How this creates market position weakness]  
-* **Cost of Inaction:** [Consequences if unaddressed]
+* **Finding:** \[Observation from evidence\]  
+* **Business Implication:** \[Direct effect on revenue, growth, competitiveness\]  
+* **Competitive Disadvantage:** \[How this creates market position weakness\]  
+* **Cost of Inaction:** \[Consequences if unaddressed\]
 
 For example:
 
@@ -1293,7 +1293,7 @@ When identifying root causes, use these specific research techniques to gather c
 **Competitive Landscape Analysis:**
 
 * Compare the company's positioning with 3-5 direct competitors  
-* Search for "[Company] vs [Competitor]" to identify how the market perceives differences  
+* Search for "\[Company\] vs \[Competitor\]" to identify how the market perceives differences  
 * Analyze G2/Capterra comparison pages for feature and messaging gaps  
 * Look for analyst reports that classify players in the space
 
@@ -1302,19 +1302,19 @@ When identifying root causes, use these specific research techniques to gather c
 * Search G2, Capterra, and TrustRadius reviews for patterns of praise or critique  
 * Look for recurring themes in customer testimonials and case studies  
 * Analyze support tickets or community discussions for pain points  
-* Search "[Company] reviews" or "[Company] customer feedback" for third-party perspectives
+* Search "\[Company\] reviews" or "\[Company\] customer feedback" for third-party perspectives
 
 **Message Consistency Testing:**
 
 * Check messaging across different channels (website, LinkedIn, PR materials)  
-* Search for "[Company] pitch deck" or "[Company] presentation" to find investor or sales materials  
+* Search for "\[Company\] pitch deck" or "\[Company\] presentation" to find investor or sales materials  
 * Compare messaging on product pages vs. solutions/use case pages  
 * Look for recent company executive interviews or podcast appearances
 
 **ICP Validation Signals:**
 
 * Search industry publications for mentions of the company's target customers  
-* Look for "[Industry] challenges" or "[Industry] pain points" to validate problem framing  
+* Look for "\[Industry\] challenges" or "\[Industry\] pain points" to validate problem framing  
 * Analyze customer logos or case studies for patterns in company size or sector  
 * Check LinkedIn for employee titles of customers to validate buyer roles
 
@@ -1329,7 +1329,7 @@ Root Cause: Positioning Weakness
 
 * "We help businesses of all sizes improve productivity" — lacks specificity  
 * "No defined category leadership claim visible on homepage" — weak market anchoring  
-* "Competitor [X] uses clearer differentiation (AI for support teams)"
+* "Competitor \[X\] uses clearer differentiation (AI for support teams)"
 
 #### 4.2.5 Root Cause Impact Mapping
 
@@ -1340,28 +1340,28 @@ When documenting a root cause, create a visual impact map showing:
 • Color coding to indicate severity (red \= critical, orange \= significant, yellow \= minor)
 
 Example format:  
-[Root Cause: Generic Positioning]  
-├── Market Messaging [CRITICAL]: Undifferentiated value proposition  
-├── Competitive Position [CRITICAL]: Weak differentiation from alternatives  
-├── Digital Experience [MODERATE]: Unclear CTAs and value communication  
-└── SEO Performance [MODERATE]: Difficulty ranking for valuable terms
+\[Root Cause: Generic Positioning\]  
+├── Market Messaging \[CRITICAL\]: Undifferentiated value proposition  
+├── Competitive Position \[CRITICAL\]: Weak differentiation from alternatives  
+├── Digital Experience \[MODERATE\]: Unclear CTAs and value communication  
+└── SEO Performance \[MODERATE\]: Difficulty ranking for valuable terms
 
 #### 4.3 Documentation Format
 
-**Root Cause**: [Title of Theme]  
+**Root Cause**: \[Title of Theme\]  
 **Business Impact:**  
-[Concise explanation of how this affects growth, revenue, or competitive position]
+\[Concise explanation of how this affects growth, revenue, or competitive position\]
 
 **Description:**  
-[Short summary of strategic issue]
+\[Short summary of strategic issue\]
 
 Supporting Evidence:
 
-* "[Quote]" — [Source: URL]  
-* "[Quote]" — [Source: URL]
+* "\[Quote\]" — \[Source: URL\]  
+* "\[Quote\]" — \[Source: URL\]
 
 **Implications:**  
-[Detail specific risks if unaddressed and what success looks like]
+\[Detail specific risks if unaddressed and what success looks like\]
 
 #### 
 
@@ -1373,10 +1373,10 @@ The company positions itself generically as a "comprehensive solution" without c
 
 **Supporting Evidence:**
 
-- "Our all-in-one platform helps businesses of all sizes improve operations." — [Homepage: https://example.com, Accessed: 03/15/2025]  
-- "We checked five competitor websites, and four use nearly identical language about 'streamlining operations' without meaningful differentiation." — [Competitive Analysis: https://competitor1.com, https://competitor2.com, Accessed: 03/15/2025]  
-- "The product pages list features but don't connect them to specific customer outcomes or explain why their approach is better." — [Product page: https://example.com/product, Accessed: 03/15/2025]  
-- "G2 reviews mention confusion about how the product differs from alternatives: 'We evaluated three similar solutions and struggled to understand why we should choose this one.'" — [G2 profile: https://g2.com/products/example, Accessed: 03/15/2025]
+- "Our all-in-one platform helps businesses of all sizes improve operations." — \[Homepage: https://example.com, Accessed: 03/15/2025\]  
+- "We checked five competitor websites, and four use nearly identical language about 'streamlining operations' without meaningful differentiation." — \[Competitive Analysis: https://competitor1.com, https://competitor2.com, Accessed: 03/15/2025\]  
+- "The product pages list features but don't connect them to specific customer outcomes or explain why their approach is better." — \[Product page: https://example.com/product, Accessed: 03/15/2025\]  
+- "G2 reviews mention confusion about how the product differs from alternatives: 'We evaluated three similar solutions and struggled to understand why we should choose this one.'" — \[G2 profile: https://g2.com/products/example, Accessed: 03/15/2025\]
 
 **Implications:**  
 If unaddressed, this positioning weakness will continue to lengthen sales cycles as prospects struggle to understand the product's unique value. Conversion rates will remain below industry benchmarks, and the company will increasingly compete on price rather than value. Success would look like a clearly articulated, evidence-backed positioning statement that highlights genuine differentiation and resonates with the target ICP's specific needs.
@@ -1454,28 +1454,28 @@ Before proceeding to Step 5:
 
 ### **STEP 5: Strategic Recommendations**
 
-**Objective:** Develop 5–7 targeted initiatives that directly address the prioritized root causes identified in Step 4. Each recommendation should clearly articulate the business rationale, the tactical execution plan, and be substantiated with previously collected evidence.
+**Objective:** Develop 5–7 targeted initiatives that directly address the prioritized root causes identified in Step 4\. Each recommendation should clearly articulate the business rationale, the tactical execution plan, and be substantiated with previously collected evidence.
 
 #### **5.1 Recommendation Format**
 
 Use the following format for each recommendation:
 
-### **Recommendation: [Title or Action Label]**
+### **Recommendation: \[Title or Action Label\]**
 
-**Root Cause Addressed:** [Reference from Step 4]
+**Root Cause Addressed:** \[Reference from Step 4\]
 
 **Rationale:**  
  Explain why this action matters — connect to ICP, growth levers, or funnel improvement. Tie directly to business impact (e.g., increased demo conversion, reduced bounce).
 
 **Implementation Actions:**
 
-* [Step-by-step or tactical moves to execute this change]  
-* [Team or resource involved: e.g., Product Marketing, Demand Gen, Web Ops]  
-* [Timeline: short-term (\<60 days) or long-term (\>90 days)]
+* \[Step-by-step or tactical moves to execute this change\]  
+* \[Team or resource involved: e.g., Product Marketing, Demand Gen, Web Ops\]  
+* \[Timeline: short-term (\<60 days) or long-term (\>90 days)\]
 
 **Supporting Evidence:**
 
-* "[Quote or pattern from observation]" — [Source: URL]
+* "\[Quote or pattern from observation\]" — \[Source: URL\]
 
 #### 5.1.5 Research Approach for Strategic Recommendations
 
@@ -1487,16 +1487,16 @@ When developing strategic recommendations, use these research techniques to ensu
 
 **Industry Best Practice Research:**
 
-* Search for "[Industry/Category] marketing best practices"  
+* Search for "\[Industry/Category\] marketing best practices"  
 * Look for case studies of successful marketing transformations in similar companies  
-* Research "[Category] conversion rate benchmarks" to set realistic improvement targets  
+* Research "\[Category\] conversion rate benchmarks" to set realistic improvement targets  
 * Analyze recent marketing innovation reports from Gartner, Forrester, or similar analysts
 
 **Peer Execution Analysis:**
 
 * Identify 2-3 companies executing well in areas you're recommending improvements  
 * Document specific examples of their successful execution with screenshots or links  
-* Search "[Successful company] marketing strategy" for insights into their approach  
+* Search "\[Successful company\] marketing strategy" for insights into their approach  
 * Look for interviews with marketing leaders at these companies
 
 **Implementation Resources Identification:**
@@ -1509,7 +1509,7 @@ When developing strategic recommendations, use these research techniques to ensu
 **ROI Validation Research:**
 
 * Search for statistical evidence of impact for each recommendation type  
-* Look for "[Recommendation type] ROI" or "[Recommendation type] impact statistics"  
+* Look for "\[Recommendation type\] ROI" or "\[Recommendation type\] impact statistics"  
 * Find benchmark data for expected improvement percentages  
 * Research companies that have implemented similar changes and document their results
 
@@ -1518,7 +1518,7 @@ For each strategic recommendation, collect at least 2-3 supporting evidence poin
 #### **5.2 Types of Recommendations to Consider**
 
 * **"Deep Research Brief" (provided by the user):** Might suggest entirely novel recommendation types not on the standard list, especially those leveraging cross-industry inspiration or addressing unarticulated needs.  
-* **Positioning Optimization:** Refine homepage messaging to reflect pain + payoff clearly for ICP  
+* **Positioning Optimization:** Refine homepage messaging to reflect pain \+ payoff clearly for ICP  
 * **Enhance Innovative Brand Presentation (Stylistic Considerations)**: For companies positioning heavily on cutting-edge technology (including, but not limited to, AI), consider adopting website information architecture, content styles, and overall digital experience elements typical of credible, innovative organizations in the tech space. This could include:  
 * Establishing a dedicated, easily accessible section for showcasing technological depth, such as **'Technology,' 'Innovation Hub,' 'AI Labs,' 'Engineering Blog,' or 'Research & Development'** (distinct from or a more prominent part of a generic 'Resources' or 'Blog'). This section should feature forward-looking content, insights into the underlying technology, or research.  
 * Strategically **blending accessible technical deep-dives (e.g., explaining methodologies, data approaches, or unique algorithms) with clear business value content** to cater to diverse audiences within the buying committee.  
@@ -1528,10 +1528,10 @@ For each strategic recommendation, collect at least 2-3 supporting evidence poin
 * **Conversion Lifts:** Replace generic CTAs with role-specific intent-aligned offers  
 * **Validation Reinforcement:** Add customer logo belt and recent case studies on homepage  
 * **Competitive Storytelling:** Create a 1-pager or section comparing competitors (win framing)  
-* **Develop 'Why Act Now?' Messaging (Urgency Creation)**: Craft compelling narratives and messaging points that create a clear sense of urgency for prospects to adopt the solution. This could highlight the tangible risks of inaction (e.g., 'falling behind competitors in [specific area like efficiency/compliance],' 'missing out on quantifiable [benefit like cost savings or revenue gains within a specific timeframe]'), the distinct advantages of early adoption in the current market, or alignment with pressing industry trends, upcoming regulatory changes, or defined windows of opportunity.  
-* **Visibility Enhancements:** Implement content operations or SEO-targeted updates for top keywords. This includes foundational on-page SEO (e.g., optimizing page titles to be unique, descriptive, and include target keywords; ensuring meta descriptions are compelling and encourage click-through; creating clear and logical URL structures; using descriptive product/feature page naming conventions such as '[Product/Feature Name] for [Target Use Case/Benefit] - [Company Name]' to improve user understanding and search relevance), improving site structure for crawlability and internal linking. Also include foundational AEO (AI Engine Optimization) practices such as using relevant structured data markup (e.g., Product, Service, FAQ, Review, How-to schema) where appropriate to enhance search engine understanding of page content, and ensuring content is clearly written, well-organized with logical heading structures (H1, H2s etc.), and easily parsable by AI crawlers and modern search engine algorithms for better interpretation and surfacing in AI-driven search results.  
-* **Unearth and Amplify Hidden Gems**: Based on findings from the historical asset review, if named past successful marketing assets (e.g., 'the [Year] [Name of Company's Award-Winning Product] Launch Campaign'), impactful prior initiatives (e.g., 'the [Name of a Past Successful Thought Leadership Initiative] customer activation'), strong community feedback from specific past events, or unique company achievements were identified as currently underutilized, develop strategies to re-integrate, repurpose, or amplify these specific proven assets.  
-* **Competitive Counter-Intelligence & Action**: Develop and implement specific strategies to neutralize or counter key competitor tactics, especially if evidence collection revealed competitor advertising on the company's branded search terms. Recommendations in such cases may include ensuring strong organic #1 ranking for brand terms, running defensive brand ad campaigns if PPC budget allows and deemed necessary, optimizing landing page experience for branded searches to improve ad quality score, or exploring trademark complaint options with ad platforms if competitor ads are misleading or infringing. This also includes creating direct competitive comparison content where ethical and appropriate, focusing on value differentiation, and strengthening branded search defense.  
+* **Develop 'Why Act Now?' Messaging (Urgency Creation)**: Craft compelling narratives and messaging points that create a clear sense of urgency for prospects to adopt the solution. This could highlight the tangible risks of inaction (e.g., 'falling behind competitors in \[specific area like efficiency/compliance\],' 'missing out on quantifiable \[benefit like cost savings or revenue gains within a specific timeframe\]'), the distinct advantages of early adoption in the current market, or alignment with pressing industry trends, upcoming regulatory changes, or defined windows of opportunity.  
+* **Visibility Enhancements:** Implement content operations or SEO-targeted updates for top keywords. This includes foundational on-page SEO (e.g., optimizing page titles to be unique, descriptive, and include target keywords; ensuring meta descriptions are compelling and encourage click-through; creating clear and logical URL structures; using descriptive product/feature page naming conventions such as '\[Product/Feature Name\] for \[Target Use Case/Benefit\] \- \[Company Name\]' to improve user understanding and search relevance), improving site structure for crawlability and internal linking. Also include foundational AEO (AI Engine Optimization) practices such as using relevant structured data markup (e.g., Product, Service, FAQ, Review, How-to schema) where appropriate to enhance search engine understanding of page content, and ensuring content is clearly written, well-organized with logical heading structures (H1, H2s etc.), and easily parsable by AI crawlers and modern search engine algorithms for better interpretation and surfacing in AI-driven search results.  
+* **Unearth and Amplify Hidden Gems**: Based on findings from the historical asset review, if named past successful marketing assets (e.g., 'the \[Year\] \[Name of Company's Award-Winning Product\] Launch Campaign'), impactful prior initiatives (e.g., 'the \[Name of a Past Successful Thought Leadership Initiative\] customer activation'), strong community feedback from specific past events, or unique company achievements were identified as currently underutilized, develop strategies to re-integrate, repurpose, or amplify these specific proven assets.  
+* **Competitive Counter-Intelligence & Action**: Develop and implement specific strategies to neutralize or counter key competitor tactics, especially if evidence collection revealed competitor advertising on the company's branded search terms. Recommendations in such cases may include ensuring strong organic \#1 ranking for brand terms, running defensive brand ad campaigns if PPC budget allows and deemed necessary, optimizing landing page experience for branded searches to improve ad quality score, or exploring trademark complaint options with ad platforms if competitor ads are misleading or infringing. This also includes creating direct competitive comparison content where ethical and appropriate, focusing on value differentiation, and strengthening branded search defense.  
 * **Proactive Change Management Communication**: For products requiring significant user workflow changes or facing potential internal resistance within customer organizations, develop specific messaging strategies and content (e.g., internal champion toolkits, user benefit guides, objection handling for specific roles) that proactively address these concerns, build user buy-in, and highlight benefits for those directly impacted.  
 * "**Optimize for AI Engine Recommendation:** Improve content structure, clarity, and use of semantic markup (Schema.org) to enhance how AI engines understand and represent the company's offerings. Develop content that directly answers questions AI might use to form recommendations." *(Addresses AEO/AI Recommendation)*  
 * "**Develop Internal Detractor Messaging & Champion Enablement Kits:** Create specific content and talking points that internal champions can use to address common objections and fears from various stakeholders (e.g., IT, finance, end-users) regarding the adoption of the solution." *(Addresses Internal Detractors)*  
@@ -1539,7 +1539,7 @@ For each strategic recommendation, collect at least 2-3 supporting evidence poin
 * "**Systematically Resurface and Amplify 'Hidden Gems':** Identify and actively promote high-performing past content, successful initiatives, or unique positive feedback that is currently underutilized. Integrate these into ongoing marketing campaigns and prominent website locations." *(Addresses Hidden Gems)*  
 * "**Implement Proactive Branded Term Defense:** If competitor ads are present on branded search terms, develop a strategy to mitigate this, which could include defensive ad campaigns, improving organic SERP dominance, or direct outreach if appropriate." *(Addresses Competitive Ads on Branded Terms)*  
 * "**Cultivate an Authentic AI-Native Digital Presence:** Beyond buzzwords, strategically evolve website design, UX, information architecture (e.g., adding 'Research' or 'Innovation' sections), and content style to genuinely reflect AI leadership and innovation." *(Addresses Nuanced AI-Native Positioning)*  
-* "**Execute Tactical Website/SEO Improvements:** Implement specific, actionable changes to website structure, page naming conventions (e.g., 'Product X - AI-Powered Solution for [Benefit]'), navigation clarity for resources, and content formatting for improved machine readability and SEO." *(Addresses Tactical Website/SEO Advice)*
+* "**Execute Tactical Website/SEO Improvements:** Implement specific, actionable changes to website structure, page naming conventions (e.g., 'Product X \- AI-Powered Solution for \[Benefit\]'), navigation clarity for resources, and content formatting for improved machine readability and SEO." *(Addresses Tactical Website/SEO Advice)*
 
 #### 5.2.1 Example Strategic Recommendation
 
@@ -1553,29 +1553,29 @@ Rather than competing as a generic "all-in-one solution," the company should dev
 
 - **Research Phase (15 days)**  
     
-  - Analyze existing customer base to identify 2-3 high-performing verticals [Customer Success team]  
-  - Conduct 5-7 interviews with successful customers in each vertical [Product Marketing]  
-  - Analyze vertical-specific competitors and their positioning [Marketing]
+  - Analyze existing customer base to identify 2-3 high-performing verticals \[Customer Success team\]  
+  - Conduct 5-7 interviews with successful customers in each vertical \[Product Marketing\]  
+  - Analyze vertical-specific competitors and their positioning \[Marketing\]
 
 
 - **Development Phase (30 days)**  
     
-  - Create vertical-specific messaging frameworks with unique value propositions [Product Marketing]  
-  - Develop ROI models calibrated to each vertical's metrics [Finance, Product Marketing]  
-  - Build customer journey maps for each vertical [Marketing, Customer Success]
+  - Create vertical-specific messaging frameworks with unique value propositions \[Product Marketing\]  
+  - Develop ROI models calibrated to each vertical's metrics \[Finance, Product Marketing\]  
+  - Build customer journey maps for each vertical \[Marketing, Customer Success\]
 
 
 - **Activation Phase (15 days)**  
     
-  - Develop vertical-specific landing pages with tailored messaging [Web, Design]  
-  - Create case studies and testimonials for each vertical [Content, Customer Success]  
-  - Train sales team on vertical-specific talking points and objection handling [Sales Enablement]
+  - Develop vertical-specific landing pages with tailored messaging \[Web, Design\]  
+  - Create case studies and testimonials for each vertical \[Content, Customer Success\]  
+  - Train sales team on vertical-specific talking points and objection handling \[Sales Enablement\]
 
 **Supporting Evidence:**
 
-- "When asked why they chose our solution, healthcare customers consistently mentioned compliance capabilities, but this isn't highlighted on our website." — [Customer interview notes, 03/10/2025]  
-- "The generic 'improves operations' messaging has a 1.7% conversion rate vs. industry benchmark of 3.2% for SaaS landing pages." — [Google Analytics, Q1 2025]  
-- "Competitors with vertical-specific landing pages show 40% higher engagement metrics and 2.8x more qualified leads." — [Competitor analysis, 03/12/2025]
+- "When asked why they chose our solution, healthcare customers consistently mentioned compliance capabilities, but this isn't highlighted on our website." — \[Customer interview notes, 03/10/2025\]  
+- "The generic 'improves operations' messaging has a 1.7% conversion rate vs. industry benchmark of 3.2% for SaaS landing pages." — \[Google Analytics, Q1 2025\]  
+- "Competitors with vertical-specific landing pages show 40% higher engagement metrics and 2.8x more qualified leads." — \[Competitor analysis, 03/12/2025\]
 
 #### **5.3 Recommendation Calibration**
 
@@ -1605,7 +1605,7 @@ For Early-Stage Companies (Seed to Series A):
 
   #### 
 
-  * **Example:** "Develop a single, clearly differentiated value proposition focused on [specific pain point] that resonates with your target healthcare audience, and implement it consistently across all digital properties."  
+  * **Example:** "Develop a single, clearly differentiated value proposition focused on \[specific pain point\] that resonates with your target healthcare audience, and implement it consistently across all digital properties."  
   * **Rationale:** Message focus is more important than breadth for early-stage companies.
 
   #### 
@@ -1784,7 +1784,7 @@ When classifying recommendations in the prioritization matrix, use these researc
 **Impact Assessment Research:**
 
 * Search for case studies documenting results from similar initiatives  
-* Look for "[Recommendation type] conversion lift" or "[Recommendation type] ROI"  
+* Look for "\[Recommendation type\] conversion lift" or "\[Recommendation type\] ROI"  
 * Research industry benchmarks for typical impact of similar changes  
 * Find before/after metrics from comparable implementations  
 * Check marketing publications for prioritization frameworks and impact ratings
@@ -1793,15 +1793,15 @@ When classifying recommendations in the prioritization matrix, use these researc
 
 * Search for implementation timelines of similar initiatives  
 * Research resource requirements for comparable projects  
-* Look for "[Recommendation type] implementation guide" or "how to implement [recommendation]"  
+* Look for "\[Recommendation type\] implementation guide" or "how to implement \[recommendation\]"  
 * Find project management templates or checklists for similar initiatives  
 * Check marketing operations blogs for effort estimation frameworks
 
 **Specific Search Queries:**
 
-* "Average time to implement [recommendation type]"  
-* "[Recommendation type] resource requirements"  
-* "Impact of [recommendation type] on [key metric]"  
+* "Average time to implement \[recommendation type\]"  
+* "\[Recommendation type\] resource requirements"  
+* "Impact of \[recommendation type\] on \[key metric\]"  
 * "B2B SaaS marketing ROI by initiative type"  
 * "Marketing quick wins high impact low effort"  
 * "Marketing effort estimation template"
@@ -1825,13 +1825,13 @@ Create a detailed 2×2 matrix using this precise format:
 | Impact \\ Effort | Low Effort (30-60 days) | High Effort (60-120+ days) |
 | :---- | :---- | :---- |
 | **High Impact** | ✅ **Quick Wins** | 🔄 **Strategic Initiatives** |
-|  | • [Specific action with owner] | • [Specific initiative with team] |
-|  | • [Estimated timeline: X days] | • [Estimated timeline: X weeks] |
-|  | • [Expected outcome: X%] | • [Expected outcome: X%] |
+|  | • \[Specific action with owner\] | • \[Specific initiative with team\] |
+|  | • \[Estimated timeline: X days\] | • \[Estimated timeline: X weeks\] |
+|  | • \[Expected outcome: X%\] | • \[Expected outcome: X%\] |
 | **Low Impact** | ⚠️ **Minor Fixes** | 🚫 **Deprioritize** |
-|  | • [Specific action] | • [Initiative to avoid] |
-|  | • [Minimal resource required] | • [Excessive resource required] |
-|  | • [Small but easy gain] | • [Limited return on effort] |
+|  | • \[Specific action\] | • \[Initiative to avoid\] |
+|  | • \[Minimal resource required\] | • \[Excessive resource required\] |
+|  | • \[Small but easy gain\] | • \[Limited return on effort\] |
 
 **Impact Assessment Criteria:**
 
@@ -1853,8 +1853,8 @@ Impact vs. Effort Priority Matrix
 
 | Impact \\ Effort | Low Effort | High Effort |
 | :---- | :---- | :---- |
-| **High Impact** | ✅ **Quick Wins** - Implement social proof on homepage (customer logos, metrics) *Addresses weak validation; requires only design and content changes [1 week]* - Create ROI calculator for top three use cases *Addresses value quantification gap; uses existing customer data [2-3 weeks]* - Add primary/secondary CTAs to all blog posts *Addresses buyer journey gaps; requires template update [1 week]* | 🔁 **Strategic Initiatives** - Develop vertical-specific value narratives and landing pages *Addresses positioning weakness; requires research and strategy [2 months]* - Build comprehensive middle-funnel content library *Addresses consideration stage gaps; requires significant content development [3-4 months]* - Implement segment-based email nurture paths *Addresses personalization gaps; requires Marketing Ops and content [2-3 months]* |
-| **Low Impact** | ⚠️ **Minor Fixes** - Standardize meta descriptions across site *Small SEO improvement; technical fix [3 days]* - Update team photos and bios *Minimal conversion impact; quick content update [1 week]* - Fix broken links in resource section *Low traffic area; technical fix [2 days]* | 🚫 **Deprioritize / Avoid** - Full website redesign *Core issues are content/messaging, not design; major project [4-6 months]* - Build customer community platform *Not aligned with current funnel gaps; requires ongoing resources [3+ months]* - Create industry thought leadership podcast *Doesn't address immediate conversion needs; significant ongoing commitment [3+ months]* |
+| **High Impact** | ✅ **Quick Wins** \- Implement social proof on homepage (customer logos, metrics) \*Addresses weak validation; requires only design and content changes \[1 week\]\* \- Create ROI calculator for top three use cases \*Addresses value quantification gap; uses existing customer data \[2-3 weeks\]\* \- Add primary/secondary CTAs to all blog posts \*Addresses buyer journey gaps; requires template update \[1 week\]\* | 🔁 **Strategic Initiatives** \- Develop vertical-specific value narratives and landing pages \*Addresses positioning weakness; requires research and strategy \[2 months\]\* \- Build comprehensive middle-funnel content library \*Addresses consideration stage gaps; requires significant content development \[3-4 months\]\* \- Implement segment-based email nurture paths \*Addresses personalization gaps; requires Marketing Ops and content \[2-3 months\]\* |
+| **Low Impact** | ⚠️ **Minor Fixes** \- Standardize meta descriptions across site \*Small SEO improvement; technical fix \[3 days\]\* \- Update team photos and bios \*Minimal conversion impact; quick content update \[1 week\]\* \- Fix broken links in resource section \*Low traffic area; technical fix \[2 days\]\* | 🚫 **Deprioritize / Avoid** \- Full website redesign \*Core issues are content/messaging, not design; major project \[4-6 months\]\* \- Build customer community platform \*Not aligned with current funnel gaps; requires ongoing resources \[3+ months\]\* \- Create industry thought leadership podcast \*Doesn't address immediate conversion needs; significant ongoing commitment \[3+ months\]\* |
 
 #### **6.4 Transition to Next Step**
 
@@ -1984,7 +1984,7 @@ When developing your phased implementation plan, use these research techniques t
 **Phase Duration Research:**
 
 * Study implementation timelines for similar marketing initiatives at comparable companies  
-* Search for "[Marketing initiative type] implementation case study" for real-world examples  
+* Search for "\[Marketing initiative type\] implementation case study" for real-world examples  
 * Consult project management resources for standard marketing project timelines  
 * Look for "Marketing transformation timeline" or "Marketing overhaul phases" in industry publications  
 * Check marketing operations blogs for process documentation on similar initiatives
@@ -1992,7 +1992,7 @@ When developing your phased implementation plan, use these research techniques t
 **Resource Allocation Benchmarking:**
 
 * Research typical team compositions for similar marketing initiatives  
-* Search "[Initiative type] resource allocation" or "FTE requirements for [initiative]"  
+* Search "\[Initiative type\] resource allocation" or "FTE requirements for \[initiative\]"  
 * Find marketing operations guides on staffing matrices for various marketing activities  
 * Review job postings for roles involved in similar initiatives to understand skill requirements  
 * Check marketing agency scoping documents for comparable projects
@@ -2008,7 +2008,7 @@ When developing your phased implementation plan, use these research techniques t
 **Success Metrics Identification:**
 
 * Search for industry benchmark metrics relevant to each implementation phase  
-* Look for "Marketing KPI benchmarks by industry" or "[Initiative type] success metrics"  
+* Look for "Marketing KPI benchmarks by industry" or "\[Initiative type\] success metrics"  
 * Study before/after case studies of similar marketing transformations  
 * Check marketing analytics guides for appropriate leading and lagging indicators  
 * Research attribution models to properly measure implementation results
@@ -2027,7 +2027,7 @@ Before proceeding to Step 8:
 * Prepare a clear milestone review process at the end of each phase  
 * Document any major dependencies or blockers that may impact implementation
 
-Now we can proceed with Step 8.
+Now we can proceed with Step 8\.
 
 ---
 
@@ -2060,13 +2060,13 @@ Now we can proceed with Step 8:
 1. One-sentence overview of the company's marketing maturity state  
 2. Three critical issues presented in order of business impact:
 
-**Critical Issue 1: [Strategic Gap Title]**
+**Critical Issue 1: \[Strategic Gap Title\]**
 
-- **Business Impact:** [Growth/revenue/competitive consequences]  
-- **Root Cause:** [Core strategic weakness]  
-- **Evidence:** "Direct quote from source" [Source: URL] plus additional context if needed  
-- **Quick Win Solution:** [30-day fix]  
-- **Strategic Solution:** [Long-term approach]
+- **Business Impact:** \[Growth/revenue/competitive consequences\]  
+- **Root Cause:** \[Core strategic weakness\]  
+- **Evidence:** "Direct quote from source" \[Source: URL\] plus additional context if needed  
+- **Quick Win Solution:** \[30-day fix\]  
+- **Strategic Solution:** \[Long-term approach\]
 
 This Critical Issues section must appear before all other analysis and should not exceed one page.
 
@@ -2086,7 +2086,7 @@ When finalizing your marketing assessment report, use these research techniques 
 
 * Verify your findings against the most current industry benchmarks and trends  
 * Search for recent industry reports published within the last 90 days  
-* Look for "[Industry] marketing trends [current year]" to ensure recommendations remain relevant  
+* Look for "\[Industry\] marketing trends \[current year\]" to ensure recommendations remain relevant  
 * Check recent analyst publications for shifts in market dynamics  
 * Review recent competitor announcements that might impact recommendations
 
@@ -2125,8 +2125,8 @@ Before finalizing your report, conduct a comprehensive review against these rese
 * Create clear visual separation between sections with horizontal rules  
 * Use bullet hierarchies consistently:  
   * Primary points use • bullets  
-  * Secondary points use - dashes  
-  * Examples or evidence use > quote formatting
+  * Secondary points use \- dashes  
+  * Examples or evidence use \> quote formatting
 
 **Narrative Flow:**
 
@@ -2143,7 +2143,7 @@ Before finalizing your report, conduct a comprehensive review against these rese
 
 * Include 1-2 "Quick Win" recommendations directly after each dimension analysis  
 * Format these as action-oriented directives:  
-  * "Immediate Action: Replace generic homepage headline with specific value proposition targeting [ICP]"  
+  * "Immediate Action: Replace generic homepage headline with specific value proposition targeting \[ICP\]"  
   * "30-Day Fix: Implement customer logo validation section above the fold"
 
 #### 8.3 Voice & Style
@@ -2170,14 +2170,14 @@ Before finalizing your report, conduct a comprehensive review against these rese
 
 * Use memorable frameworks to encapsulate findings:  
   * "The 3C gap: The company has Content without Conversion or Credibility"  
-  * "The positioning suffers from the 'So What?' syndrome - technically accurate but emotionally irrelevant"  
+  * "The positioning suffers from the 'So What?' syndrome \- technically accurate but emotionally irrelevant"  
   * "The website creates a 'trust deficit' by promising enterprise capabilities with SMB-level validation"
 
 **Rhetorical Questions:**
 
 * Use targeted questions to frame problems:  
-  * "Why would a prospect choose this solution over [Competitor X] based on the homepage alone?"  
-  * "What compelling reason does a [ICP title] have to take immediate action?"  
+  * "Why would a prospect choose this solution over \[Competitor X\] based on the homepage alone?"  
+  * "What compelling reason does a \[ICP title\] have to take immediate action?"  
   * "How does this messaging address the fundamental concerns of the economic buyer?"
 
 #### **8.4 Quality Assurance**
