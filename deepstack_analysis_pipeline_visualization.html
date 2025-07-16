@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepStack Analysis Pipeline</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+        }
+        .pipeline-block {
+            background-color: white;
+            border: 1px solid #e5e7eb; /* Gray-200 */
+            border-radius: 0.75rem; /* 12px */
+            padding: 1.5rem; /* 24px */
+            margin-bottom: 1.5rem; /* 24px */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease-in-out;
+        }
+        .pipeline-block:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transform: translateY(-2px);
+        }
+        .pipeline-title {
+            font-size: 1.25rem; /* 20px */
+            font-weight: 700;
+            color: #1e3a8a; /* Indigo-800 */
+            margin-bottom: 0.75rem; /* 12px */
+            display: flex;
+            align-items: center;
+        }
+        .pipeline-subtitle {
+            font-size: 0.875rem; /* 14px */
+            color: #4b5563; /* Gray-600 */
+            margin-bottom: 1rem; /* 16px */
+        }
+        .pipeline-content ul {
+            list-style-type: disc;
+            list-style-position: inside;
+            color: #374151; /* Gray-700 */
+            margin-left: 0.5rem; /* 8px */
+        }
+        .pipeline-content ul li {
+            margin-bottom: 0.25rem; /* 4px */
+        }
+        .output-tag {
+            display: inline-block;
+            background-color: #e0f2fe; /* Sky-100 */
+            color: #0c4a6e; /* Sky-800 */
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px; /* Full pill shape */
+            font-size: 0.875rem; /* 14px */
+            font-weight: 500;
+            margin-top: 1rem; /* 16px */
+        }
+        .arrow {
+            text-align: center;
+            font-size: 2rem; /* 32px */
+            color: #6b7280; /* Gray-500 */
+            margin: 0.5rem 0; /* 8px vertical margin */
+        }
+        .sub-block {
+            background-color: #f9fafb; /* Gray-50 */
+            border: 1px solid #d1d5db; /* Gray-300 */
+            border-radius: 0.5rem; /* 8px */
+            padding: 1rem; /* 16px */
+            margin-top: 1rem; /* 16px */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .sub-block-title {
+            font-weight: 600;
+            /* color defined in specific block styling */
+            margin-bottom: 0.5rem;
+            cursor: pointer; /* Indicate it's clickable */
+        }
+         .sub-block-title:hover {
+            opacity: 0.8;
+        }
+        .description-box {
+            display: none; /* Hidden by default */
+            background-color: #eef2ff; /* Indigo-50 */
+            border: 1px solid #c7d2fe; /* Indigo-200 */
+            border-radius: 0.5rem; /* 8px */
+            padding: 1rem; /* 16px */
+            margin-top: 0.75rem; /* 12px */
+            font-size: 0.875rem; /* 14px */
+            color: #3730a3; /* Indigo-700 */
+        }
+        .grid-container {
+            display: grid;
+            gap: 1rem; /* 16px */
+        }
+        .icon {
+            margin-right: 0.5rem;
+            width: 1.5em;
+            height: 1.5em;
+            flex-shrink: 0;
+        }
+        .key-insight-block, .multiplier-effect-block {
+            background-color: #fffbeb; /* Amber-50 */
+            border: 1px solid #fde68a; /* Amber-200 */
+            color: #78350f; /* Amber-800 */
+        }
+        .key-insight-title, .multiplier-title {
+            font-size: 1.25rem; /* 20px */
+            font-weight: 700;
+            color: #92400e; /* Amber-700 */
+            margin-bottom: 0.75rem; /* 12px */
+            display: flex;
+            align-items: center;
+        }
+        #mainContainer {
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-6 md:p-8">
+    <div id="mainContainer" class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-8">DeepStack Analysis Pipeline</h1>
+
+        <div class="pipeline-block">
+            <div class="pipeline-title">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" /></svg>
+                DEEPSTACK COLLECTOR
+            </div>
+            <div class="pipeline-subtitle">(Python Code)</div>
+            <div class="pipeline-content">
+                <ul>
+                    <li>Crawls company websites</li>
+                    <li>Captures MarTech stack, SEO, UX patterns</li>
+                    <li>Extracts conversion infrastructure</li>
+                </ul>
+                <div class="output-tag">Output: Structured JSON Data</div>
+            </div>
+        </div>
+
+        <div class="arrow">▼</div>
+
+        <div class="pipeline-block">
+            <div class="pipeline-title">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 7.5V6.108c0-1.135.845-2.098 1.976-2.192.373-.03.748-.03 1.123 0 1.131.094 1.976 1.057 1.976 2.192V7.5M8.25 7.5h7.5M8.25 7.5V15M15.75 15V7.5M15.75 15c0 1.135-.845 2.098-1.976 2.192a48.424 48.424 0 0 1-1.123 0c-1.131-.094-1.976-1.057-1.976-2.192M15.75 15h-7.5" /></svg>
+                STRUCTURED JSON OUTPUT
+            </div>
+            <div class="grid-container sm:grid-cols-2 lg:grid-cols-3">
+                <div class="sub-block">
+                    <div class="sub-block-title" data-target="desc-martech">MarTech Data</div>
+                    <div id="desc-martech" class="description-box">
+                        <p><strong>Marketing Technology (MarTech) Data:</strong> This includes information about the software and tools a company uses for its marketing efforts. </p>
+                        <ul class="list-disc list-inside mt-2">
+                            <li>Identified tools (e.g., CRM, analytics, automation platforms).</li>
+                            <li>Version numbers and configurations if detectable.</li>
+                            <li>Integration patterns between different MarTech components.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sub-block">
+                    <div class="sub-block-title" data-target="desc-seo">SEO Signals</div>
+                     <div id="desc-seo" class="description-box">
+                        <p><strong>Search Engine Optimization (SEO) Signals:</strong> Data related to a website's visibility and ranking in search engine results.</p>
+                        <ul class="list-disc list-inside mt-2">
+                            <li>Keyword rankings for relevant terms.</li>
+                            <li>Backlink profile analysis (quality and quantity).</li>
+                            <li>On-page SEO elements (meta tags, headers, content structure).</li>
+                            <li>Technical SEO aspects (site speed, mobile-friendliness, sitemap).</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sub-block">
+                    <div class="sub-block-title" data-target="desc-ux">UX Performance</div>
+                    <div id="desc-ux" class="description-box">
+                        <p><strong>User Experience (UX) Performance:</strong> Metrics and observations about how easy and enjoyable a website is to use.</p>
+                        <ul class="list-disc list-inside mt-2">
+                            <li>Page load speed and Core Web Vitals.</li>
+                            <li>Mobile responsiveness and usability.</li>
+                            <li>Navigation clarity and information architecture.</li>
+                            <li>Observed usability patterns or friction points.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sub-block">
+                    <div class="sub-block-title" data-target="desc-conversion">Conversion Data</div>
+                    <div id="desc-conversion" class="description-box">
+                        <p><strong>Conversion Data:</strong> Information related to how effectively a website converts visitors into leads or customers.</p>
+                        <ul class="list-disc list-inside mt-2">
+                            <li>Call-to-action (CTA) elements and their placement.</li>
+                            <li>Lead capture forms and processes.</li>
+                            <li>Funnel analysis (e.g., sign-up flows, checkout processes).</li>
+                            <li>Use of A/B testing tools or personalization.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sub-block">
+                    <div class="sub-block-title" data-target="desc-competitive">Competitive Signals</div>
+                    <div id="desc-competitive" class="description-box">
+                        <p><strong>Competitive Signals:</strong> Data that provides insights into a company's position relative to its competitors.</p>
+                        <ul class="list-disc list-inside mt-2">
+                            <li>Comparison of MarTech stacks with key competitors.</li>
+                            <li>Benchmarking of SEO performance against competitors.</li>
+                            <li>Observed differences in UX or conversion strategies.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="arrow">▼</div>
+
+        <div class="pipeline-block">
+            <div class="pipeline-title">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" /></svg>
+                DEEPSTACK ANALYSIS GEM
+            </div>
+            <div class="pipeline-subtitle">(Gemini-Powered)</div>
+            <div class="grid-container grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="sub-block border-purple-300 bg-purple-50">
+                    <div class="sub-block-title text-purple-700">SIGNALS (L1)</div>
+                    <ul class="text-sm text-purple-600">
+                        <li>Factual technical overview</li>
+                        <li>Plain-English implications</li>
+                        <li>Client-side facts</li>
+                    </ul>
+                    <p class="text-xs mt-auto pt-2 text-purple-500">Audience: Non-technical / Business Users</p>
+                </div>
+                <div class="sub-block border-blue-300 bg-blue-50">
+                    <div class="sub-block-title text-blue-700">SNAPSHOT (L2)</div>
+                    <ul class="text-sm text-blue-600">
+                        <li>Executive Summary</li>
+                        <li>High-level strategic implications</li>
+                        <li>Quick decisions</li>
+                    </ul>
+                     <p class="text-xs mt-auto pt-2 text-blue-500">Audience: CMO/EIR</p>
+                </div>
+                <div class="sub-block border-green-300 bg-green-50">
+                    <div class="sub-block-title text-green-700">GROUND TRUTH (L3)</div>
+                    <ul class="text-sm text-green-600">
+                        <li>Detailed technical evidence</li>
+                        <li>Comprehensive analysis</li>
+                        <li>Research foundation</li>
+                    </ul>
+                    <p class="text-xs mt-auto pt-2 text-green-500">Audience: Deep Research</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex mb-4 mt-4">
+            <div class="w-1/2 text-center"> <div class="arrow text-blue-500">▼</div>
+            </div>
+            <div class="w-1/2 text-center"> <div class="arrow text-green-500">▼</div>
+            </div>
+        </div>
+
+
+        <div class="grid-container md:grid-cols-2 mb-4">
+            <div class="pipeline-block border-l-4 border-blue-500"> <div class="pipeline-title text-blue-700"> <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" /></svg>
+                    Quick Executive Decision Track
+                </div>
+                <div class="pipeline-content">
+                    <p class="text-sm text-gray-600">Fed by <strong>Snapshot (L2)</strong> for rapid strategic alignment and high-level decision-making.</p>
+                </div>
+            </div>
+
+            <div class="pipeline-block border-l-4 border-green-500"> <div class="pipeline-title text-green-700"> <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" /></svg>
+                    DEEP RESEARCH BRIEF
+                </div>
+                <div class="pipeline-subtitle">(Strategic Context Layer)</div>
+                <div class="pipeline-content">
+                    <ul>
+                        <li>Factual context from Snapshot (L2)</li> <li>Technical baseline from Ground Truth (L3)</li>
+                        <li>+ Market intelligence</li>
+                        <li>+ Competitive dynamics</li>
+                        <li>+ Customer voice research</li>
+                    </ul>
+                    <div class="output-tag bg-green-100 text-green-800">Output: Strategic brief with revelatory insights</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-end mb-4"> <div class="w-1/2 text-center"> <div class="arrow text-green-500">▼</div>
+            </div>
+        </div>
+
+        <div class="pipeline-block ml-auto w-full md:w-1/2 md:ml-[50%]">
+            <div class="pipeline-title"> <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 0 1 5.814-5.519l2.74-1.22m0 0L21.75 12M16.5 7.5h5.25v5.25" /></svg>
+                MARKETING EFFECTIVENESS ANALYSIS
+            </div>
+            <div class="pipeline-subtitle">(Investment Decision Engine)</div>
+            <div class="pipeline-content">
+                <ul>
+                    <li>Comprehensive strategic evaluation</li>
+                    <li>Actionable recommendations</li>
+                    <li>Implementation roadmap</li>
+                    <li>ROI projections</li>
+                </ul>
+                <div class="output-tag">Output: Boardroom-ready strategic assessment</div>
+            </div>
+        </div>
+
+        <div class="flex justify-end mb-4">
+            <div class="w-1/2 text-center">
+                <div class="arrow">▼</div>
+            </div>
+        </div>
+
+        <div class="pipeline-block ml-auto w-full md:w-1/2 md:ml-[50%]">
+            <div class="pipeline-title"> <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672Zm-7.518-.267A8.25 8.25 0 1 1 20.25 10.5M8.288 14.212A5.25 5.25 0 1 1 17.25 10.5" /></svg>
+                STRATEGIC OUTPUTS
+            </div>
+            <div class="grid-container sm:grid-cols-1 md:grid-cols-2"> <div class="sub-block">
+                    <div class="sub-block-title">DUE DILIGENCE</div>
+                    <ul class="text-sm"><li>GTM assessment</li><li>Risk ID</li><li>Capability gaps</li></ul>
+                </div>
+                <div class="sub-block">
+                    <div class="sub-block-title">MARKET INTEL</div>
+                    <ul class="text-sm"><li>Industry patterns</li><li>Best practices</li><li>Benchmarks</li></ul>
+                </div>
+                </div>
+        </div>
+
+        <hr class="my-12 border-t-2 border-gray-300">
+
+        <div class="pipeline-block key-insight-block">
+            <div class="key-insight-title">
+                KEY INSIGHT
+            </div>
+            <div class="pipeline-content text-amber-700">
+                <p class="mb-2">Most VCs analyze companies from the outside looking in.</p>
+                <p class="mb-2"><strong>Scale analyzes the technical infrastructure that actually drives GTM success.</strong></p>
+                <p>This isn't just due diligence - it's competitive intelligence that becomes portfolio company value creation.</p>
+            </div>
+        </div>
+
+        <hr class="my-12 border-t-2 border-gray-300">
+
+        <div class="pipeline-block multiplier-effect-block">
+            <div class="multiplier-title">
+                THE STRATEGIC MULTIPLIER EFFECT
+            </div>
+            <div class="pipeline-content text-amber-00 space-y-3">
+                <p><strong>Layer 1:</strong> Website says "We're growing fast!"<br>
+                    <strong>Layer 4:</strong> Analysis reveals exactly why (or why not) based on technical GTM infrastructure.</p>
+                <p><strong>Traditional DD:</strong> "Do they have product-market fit?"<br>
+                    <strong>DeepStack DD:</strong> "Does their technical stack support their claimed GTM motion?"</p>
+                <p><strong>The difference:</strong> You're not just evaluating companies - you're building a proprietary database of what technical patterns actually drive B2B SaaS success.</p>
+                <p>Every analysis feeds back into smarter pattern recognition. Every portfolio company gets better GTM advice based on technical benchmarks from hundreds of companies.</p>
+                <p class="font-semibold">That's how you turn website forensics into investment alpha.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get all clickable sub-block titles
+        const clickableTitles = document.querySelectorAll('.sub-block-title[data-target]');
+
+        clickableTitles.forEach(title => {
+            title.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                const targetDescriptionBox = document.getElementById(targetId);
+
+                // First, hide all description boxes in this section to ensure only one is open
+                const allDescriptionBoxes = this.closest('.grid-container').querySelectorAll('.description-box');
+                allDescriptionBoxes.forEach(box => {
+                    if (box.id !== targetId) { // Don't hide the one we are about to toggle
+                        box.style.display = 'none';
+                    }
+                });
+
+                // Toggle the display of the clicked description box
+                if (targetDescriptionBox) {
+                    if (targetDescriptionBox.style.display === 'none' || targetDescriptionBox.style.display === '') {
+                        targetDescriptionBox.style.display = 'block';
+                    } else {
+                        targetDescriptionBox.style.display = 'none';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

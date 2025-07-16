@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scale GTM Intelligence Flow</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-sankey/0.12.3/d3-sankey.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+        
+        .chart-container {
+            width: 100%;
+            height: 600px;
+            margin: 20px 0;
+        }
+        
+        .node-label {
+            font-size: 14px;
+            font-weight: 600;
+            fill: #2c3e50;
+        }
+        
+        .link {
+            fill: none;
+            stroke-opacity: 0.6;
+            mix-blend-mode: multiply;
+        }
+        
+        .link:hover {
+            stroke-opacity: 0.8;
+        }
+        
+        .legend {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .legend-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .legend-item {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            margin-right: 12px;
+        }
+        
+        .legend-text {
+            font-size: 14px;
+            color: #34495e;
+            line-height: 1.4;
+        }
+        
+        .insights {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .insight-card {
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .insight-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .insight-desc {
+            font-size: 14px;
+            line-height: 1.5;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">Scale GTM Intelligence System</div>
+            <div class="subtitle">From Technical Signals to Strategic Advantage</div>
+        </div>
+        
+        <div class="chart-container">
+            <svg id="sankey-chart"></svg>
+        </div>
+        
+        <div class="legend">
+            <div class="legend-title">Intelligence Flow Architecture</div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #e74c3c;"></div>
+                <div class="legend-text"><strong>DeepStack Technical Intelligence:</strong> Automated collection of digital execution signals, technology stack analysis, and GTM execution patterns</div>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #f39c12;"></div>
+                <div class="legend-text"><strong>Deep Research Brief:</strong> Comprehensive manual research and expert analysis combining technical signals with strategic context</div>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #27ae60;"></div>
+                <div class="legend-text"><strong>Marketing Effectiveness Analysis:</strong> Final strategic assessment with actionable recommendations for investment and advisory decisions</div>
+            </div>
+        </div>
+        
+        <div class="insights">
+            <div class="insight-card">
+                <div class="insight-title">Competitive Research</div>
+                <div class="insight-desc">Extract winning GTM patterns from top performers to create proven playbooks for portfolio companies and establish Scale's thought leadership</div>
+            </div>
+            <div class="insight-card">
+                <div class="insight-title">Due Diligence</div>
+                <div class="insight-desc">Analyze prospect marketing effectiveness to inform investment decisions and provide high-value insights during the courtship process</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set up dimensions and margins
+        const margin = {top: 50, right: 20, bottom: 20, left: 40};
+        const width = 1140 - margin.left - margin.right;
+        const height = 600 - margin.top - margin.bottom;
+
+        // Create SVG
+        const svg = d3.select("#sankey-chart")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+
+        // Define the data structure
+        const data = {
+            nodes: [
+                // DeepStack Sources (Column 1)
+                {name: "Marketing Technology\nStack Analysis", category: "deepstack", level: 0},
+                {name: "Security & Compliance\nSignals", category: "deepstack", level: 0},
+                {name: "Customer Social Proof\nDetection", category: "deepstack", level: 0},
+                {name: "Pricing Strategy\nAnalysis", category: "deepstack", level: 0},
+                {name: "Performance &\nOptimization Signals", category: "deepstack", level: 0},
+                
+                // Deep Research Brief (Column 2)
+                {name: "Deep Research Brief\n(Enhanced)", category: "brief", level: 1},
+                
+                // MEA Components (Column 3)
+                {name: "GTM Execution\nSophistication", category: "mea", level: 2},
+                {name: "Competitive Position\n& Messaging", category: "mea", level: 2},
+                {name: "Customer Acquisition\nEffectiveness", category: "mea", level: 2},
+                {name: "Strategic Vulnerabilities\n& Opportunities", category: "mea", level: 2},
+                
+                // Final Outputs (Column 4)
+                {name: "Investment Decision\nSupport", category: "output", level: 3},
+                {name: "Portfolio Company\nAdvisory & Playbooks", category: "output", level: 3},
+                {name: "Prospect Value\nDemonstration", category: "output", level: 3}
+            ],
+            links: [
+                // DeepStack to Brief
+                {source: 0, target: 5, value: 25}, // MarTech to Brief
+                {source: 1, target: 5, value: 20}, // Security to Brief
+                {source: 2, target: 5, value: 20}, // Social Proof to Brief
+                {source: 3, target: 5, value: 25}, // Pricing to Brief
+                {source: 4, target: 5, value: 20}, // Performance to Brief
+                
+                // Brief to MEA Components
+                {source: 5, target: 6, value: 30}, // Brief to GTM Sophistication
+                {source: 5, target: 7, value: 25}, // Brief to Competitive Position
+                {source: 5, target: 8, value: 25}, // Brief to Customer Acquisition
+                {source: 5, target: 9, value: 30}, // Brief to Strategic Vulnerabilities
+                
+                // MEA Components to Outputs
+                {source: 6, target: 10, value: 15}, // GTM to Investment
+                {source: 6, target: 11, value: 20}, // GTM to Portfolio
+                {source: 7, target: 10, value: 12}, // Competitive to Investment
+                {source: 7, target: 12, value: 18}, // Competitive to Prospect
+                {source: 8, target: 11, value: 15}, // Customer Acq to Portfolio
+                {source: 8, target: 12, value: 15}, // Customer Acq to Prospect
+                {source: 9, target: 10, value: 18}, // Strategic to Investment
+                {source: 9, target: 11, value: 10}, // Strategic to Portfolio
+                {source: 9, target: 12, value: 12}  // Strategic to Prospect
+            ]
+        };
+
+        // Color scheme
+        const colors = {
+            deepstack: "#e74c3c",
+            brief: "#f39c12", 
+            mea: "#27ae60",
+            output: "#3498db"
+        };
+
+        // Create sankey generator
+        const sankey = d3.sankey()
+            .nodeWidth(15)
+            .nodePadding(10)
+            .extent([[1, 1], [width - 1, height - 5]]);
+
+        // Generate the sankey diagram
+        const {nodes, links} = sankey(data);
+
+        // Add links
+        g.append("g")
+            .selectAll("path")
+            .data(links)
+            .join("path")
+            .attr("d", d3.sankeyLinkHorizontal())
+            .attr("stroke", d => colors[d.source.category])
+            .attr("stroke-width", d => Math.max(1, d.width))
+            .attr("fill", "none")
+            .attr("stroke-opacity", 0.6)
+            .on("mouseover", function(event, d) {
+                d3.select(this).attr("stroke-opacity", 0.8);
+            })
+            .on("mouseout", function(event, d) {
+                d3.select(this).attr("stroke-opacity", 0.6);
+            });
+
+        // Add nodes
+        g.append("g")
+            .selectAll("rect")
+            .data(nodes)
+            .join("rect")
+            .attr("x", d => d.x0)
+            .attr("y", d => d.y0)
+            .attr("height", d => d.y1 - d.y0)
+            .attr("width", d => d.x1 - d.x0)
+            .attr("fill", d => colors[d.category])
+            .attr("rx", 3)
+            .attr("ry", 3);
+
+        // Add node labels
+        g.append("g")
+            .selectAll("text")
+            .data(nodes)
+            .join("text")
+            .attr("x", d => d.x0 < width / 2 ? d.x1 + 6 : d.x0 - 6)
+            .attr("y", d => (d.y1 + d.y0) / 2)
+            .attr("dy", "0.35em")
+            .attr("text-anchor", d => d.x0 < width / 2 ? "start" : "end")
+            .attr("font-size", "12px")
+            .attr("font-weight", "600")
+            .attr("fill", "#2c3e50")
+            .text(d => d.name);
+
+        // Add column headers
+        const columnHeaders = [
+            {x: 100, y: -15, text: "DeepStack Technical Intelligence", color: colors.deepstack},
+            {x: 350, y: -15, text: "Deep Research Brief", color: colors.brief},
+            {x: 650, y: -15, text: "Marketing Effectiveness Analysis", color: colors.mea},
+            {x: 950, y: -15, text: "Strategic Outputs", color: colors.output}
+        ];
+
+        g.selectAll(".column-header")
+            .data(columnHeaders)
+            .join("text")
+            .attr("class", "column-header")
+            .attr("x", d => d.x)
+            .attr("y", d => d.y)
+            .attr("text-anchor", "middle")
+            .attr("font-size", "14px")
+            .attr("font-weight", "700")
+            .attr("fill", d => d.color)
+            .text(d => d.text);
+    </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+# My list of B2B SaaS Companies
+https://www.hubspot.com
+www.salesforce.com  # The script will add https://
+https://www.observe.ai
+https://www.canva.com
+# https://www.anothercompany.com (example of a commented-out URL)
