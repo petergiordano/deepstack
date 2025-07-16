@@ -10,9 +10,22 @@ Output Files:
     - Batch mode: deepstack_output.json
 
 Usage:
-    ./deepstack.sh -u https://example.com  # Single URL analysis
-    ./deepstack.sh                          # Batch analysis from urls_to_analyze.txt
-    bash deepstack.sh -u https://example.com
+    Single URL Mode:
+        ./deepstack.sh -u https://example.com
+        # Output: deepstack_output-example.com.json
+
+        ./deepstack.sh -u https://www.google.com
+        # Output: deepstack_output-google.com.json
+
+        ./deepstack.sh -u https://subdomain.example.com:8080
+        # Output: deepstack_output-subdomain.example.com_8080.json
+
+    Batch Mode:
+        ./deepstack.sh
+        # Output: deepstack_output.json (reads from urls_to_analyze.txt)
+
+    Alternative execution:
+        bash deepstack.sh -u https://example.com
 """
 
 # Get the directory where this script is located

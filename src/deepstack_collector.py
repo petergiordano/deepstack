@@ -9,8 +9,19 @@ Output Files:
     - Batch mode: deepstack_output.json (reads from urls_to_analyze.txt)
 
 Usage:
-    python3 deepstack_collector.py -u https://example.com  # Single URL analysis
-    python3 deepstack_collector.py                          # Batch analysis
+    Single URL Mode:
+        python3 deepstack_collector.py -u https://example.com
+        # Output: deepstack_output-example.com.json
+
+        python3 deepstack_collector.py -u https://www.google.com
+        # Output: deepstack_output-google.com.json
+
+        python3 deepstack_collector.py -u https://subdomain.example.com:8080
+        # Output: deepstack_output-subdomain.example.com_8080.json
+
+    Batch Mode:
+        python3 deepstack_collector.py
+        # Output: deepstack_output.json (reads from urls_to_analyze.txt)
 """
 
 from playwright.sync_api import sync_playwright

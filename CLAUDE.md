@@ -91,12 +91,20 @@ You can run the DeepStack Collector from the root directory using either of the 
 
 ```bash
 python3 deepstack.py -u https://example.com
+# Output: deepstack_output-example.com.json
+
+python3 deepstack.py -u https://www.google.com
+# Output: deepstack_output-google.com.json
+
+python3 deepstack.py -u https://subdomain.example.com:8080
+# Output: deepstack_output-subdomain.example.com_8080.json
 ```
 
 **Batch Analysis:**
 
 ```bash
 python3 deepstack.py
+# Output: deepstack_output.json (reads from urls_to_analyze.txt)
 ```
 
 ### Using Shell Launcher
@@ -105,12 +113,20 @@ python3 deepstack.py
 
 ```bash
 ./deepstack.sh -u https://example.com
+# Output: deepstack_output-example.com.json
+
+./deepstack.sh -u https://www.google.com
+# Output: deepstack_output-google.com.json
+
+./deepstack.sh -u https://subdomain.example.com:8080
+# Output: deepstack_output-subdomain.example.com_8080.json
 ```
 
 **Batch Analysis:**
 
 ```bash
 ./deepstack.sh
+# Output: deepstack_output.json (reads from urls_to_analyze.txt)
 ```
 
 ### Direct Execution

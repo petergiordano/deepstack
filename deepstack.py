@@ -10,8 +10,19 @@ Output Files:
     - Batch mode: deepstack_output.json
 
 Usage:
-    python3 deepstack.py -u https://example.com  # Single URL analysis
-    python3 deepstack.py                          # Batch analysis from urls_to_analyze.txt
+    Single URL Mode:
+        python3 deepstack.py -u https://example.com
+        # Output: deepstack_output-example.com.json
+
+        python3 deepstack.py -u https://www.google.com
+        # Output: deepstack_output-google.com.json
+
+        python3 deepstack.py -u https://subdomain.example.com:8080
+        # Output: deepstack_output-subdomain.example.com_8080.json
+
+    Batch Mode:
+        python3 deepstack.py
+        # Output: deepstack_output.json (reads from urls_to_analyze.txt)
 """
 
 import sys
