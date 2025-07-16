@@ -17,8 +17,9 @@ deepstack/
 ├── docs/                          # Documentation and visualizations
 │   ├── deepstack-workflow-architecture.md
 │   ├── deepstack_scale_gtm_sankey_diagram.html
-│   └── deepstack_analysis_pipeline_visualization.html
-├── meara_agent_docs/              # AI agent reference documentation
+│   ├── deepstack_analysis_pipeline_visualization.html
+│   ├── meara_agent_docs/          # MEARA marketing analysis AI agent docs
+│   └── deepstack_analysis_agent_docs/ # DeepStack analysis AI agent docs
 ├── tools/                         # Utility scripts
 │   ├── clean_markdown.py
 │   └── markdown_cleaner.py
@@ -150,7 +151,7 @@ python3 src/deepstack_collector.py
 ## Input/Output Files
 
 - **Input**: `urls_to_analyze.txt` - Contains URLs to analyze (created automatically if missing)
-- **Output**: 
+- **Output**:
   - **Single URL mode**: `deepstack_output-{domain}.json` (e.g., `deepstack_output-example.com.json`)
     - Automatically extracts domain name from URL, removes `www.` prefix
     - Replaces colons with underscores for ports (e.g., `example.com_8080`)
@@ -199,9 +200,13 @@ The tool includes comprehensive error handling for:
 - Missing or inaccessible iframes
 - JSON serialization errors
 
-## MEARA Agent Documentation
+## AI Agent Documentation
 
-The `meara_agent_docs/` folder contains reference documentation for building AI agents that consume DeepStack collector output for marketing analysis:
+The `docs/` directory contains two sets of AI agent documentation:
+
+### MEARA Agent Documentation (`docs/meara_agent_docs/`)
+
+Documentation for building AI agents that consume DeepStack collector output for marketing analysis:
 
 - **project_system_Instructions.md**: System instructions for B2B SaaS Marketing Analysis AI agents
 - **instruct_marketing_analysis.md**: Detailed methodology and output formatting requirements
@@ -211,11 +216,21 @@ The `meara_agent_docs/` folder contains reference documentation for building AI 
 - **deep_research_prompt-meara-b2b-insights.md**: Prompts for deep research insights
 - **Actual-Marketing-Analysis-Example-by-Maria-P.md**: Reference example of analysis output
 
-These documents are used to build Claude Projects, Gemini Gems, ChatGPT Custom GPTs, and other AI agents that process DeepStack's raw JSON output into strategic marketing intelligence. They serve as reference material for improving the collector's data structure and ensuring it captures the signals needed for downstream analysis.
+### DeepStack Analysis Agent Documentation (`docs/deepstack_analysis_agent_docs/`)
 
-## Documentation
+Documentation for building AI agents that analyze and interpret DeepStack's technical output:
 
-The `docs/` directory contains project documentation and visualization files:
+- **System_Instructions_DeepStack_Analysis_Gem.md**: Core system instructions for DeepStack analysis agents
+- **Instruct_DeepStack_L1_Signals.md**: L1 signal detection and interpretation instructions
+- **Instruct_DeepStack_L2_Snapshot.md**: L2 snapshot analysis methodology
+- **Instruct_DeepStack_L3_GroundTruth.md**: L3 ground truth analysis framework
+- **_README-DeepStack_Analysis_Gem.md**: Overview and setup guide for DeepStack analysis gems
+
+These documents are used to build Claude Projects, Gemini Gems, ChatGPT Custom GPTs, and other AI agents that process DeepStack's raw JSON output into strategic intelligence. They serve as reference material for improving the collector's data structure and ensuring it captures the signals needed for downstream analysis.
+
+### Workflow Documentation and Visualizations
+
+The `docs/` directory also contains workflow documentation and interactive visualizations:
 
 - **deepstack-workflow-architecture.md**: Complete workflow documentation including L1/L2/L3 output levels and GTM intelligence pipeline
 - **deepstack_scale_gtm_sankey_diagram.html**: Interactive Sankey diagram visualization of the GTM analysis pipeline  
