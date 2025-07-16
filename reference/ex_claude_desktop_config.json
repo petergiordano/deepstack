@@ -1,0 +1,81 @@
+{
+  "mcpServers": {
+    "brave-search": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-brave-search"
+      ],
+      "env": {
+        "BRAVE_API_KEY": "BSA9Aq6O6iFv18mWKI-M-v2cpHgiBx1"
+      }
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y", 
+        "@modelcontextprotocol/server-filesystem",
+        "/Users/petergiordano/Desktop",
+        "/Users/petergiordano/Downloads",
+        "/Users/petergiordano/Library/Mobile Documents/com~apple~CloudDocs/dev-icloud",
+        "/Users/petergiordano/Library/CloudStorage/GoogleDrive-pgiordano@gmail.com/My Drive",
+        "/Users/petergiordano/Documents/GitHub"
+      ]
+    },
+    "fetch": {
+      "command": "/Applications/anaconda3/bin/python3",
+        "args": ["-m", "mcp_server_fetch"]
+    },
+    "context7": {
+      "command": "npx",
+        "args": ["-y", "@upstash/context7-mcp@latest"]
+    },
+    "taskmaster-ai": {
+      "command": "npx",
+        "args": ["-y", "--package=task-master-ai", "task-master-ai"],
+         "env": {
+           "ANTHROPIC_API_KEY": "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"
+         }
+    },
+     "memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ]
+    },
+    "mcp-server-firecrawl": {
+      "command": "npx",
+      "args": ["-y", "firecrawl-mcp"],
+      "env": {
+        "FIRECRAWL_API_KEY": "fc-13c790698f4a49fb9157319c25f8cfa0",
+
+        "FIRECRAWL_RETRY_MAX_ATTEMPTS": "5",
+        "FIRECRAWL_RETRY_INITIAL_DELAY": "2000",
+        "FIRECRAWL_RETRY_MAX_DELAY": "30000",
+        "FIRECRAWL_RETRY_BACKOFF_FACTOR": "3",
+
+        "FIRECRAWL_CREDIT_WARNING_THRESHOLD": "2000",
+        "FIRECRAWL_CREDIT_CRITICAL_THRESHOLD": "500"
+      }
+    },  
+    "Readwise MCP": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@readwise/readwise-mcp"
+      ],
+      "env": {
+        "ACCESS_TOKEN": "WTmJbWX7835FkNw1UwoVBhNqHytnbpG5AyRL7gyqNikhlkHlcZ"
+      }
+    },
+    "notion": {
+      "command": "npx",
+      "args": ["-y", "@suekou/mcp-notion-server"],
+      "env": {
+        "NOTION_API_TOKEN": "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",
+        "NOTION_MARKDOWN_CONVERSION": "true"
+      }
+    }
+  }
+}

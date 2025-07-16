@@ -6,9 +6,30 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a Python-based web scraping and analysis tool called "DeepStack Collector" that analyzes websites for marketing technology (MarTech) stacks, conversion tracking, and competitive intelligence. The tool uses Playwright for web automation and BeautifulSoup for HTML parsing.
 
+## Project Structure
+
+```
+deepstack/
+├── src/                           # Source code
+│   └── deepstack_collector.py     # Main analysis script
+├── docs/                          # Documentation and visualizations
+│   ├── deepstack-workflow-architecture.md
+│   ├── deepstack_scale_gtm_sankey_diagram.html
+│   └── deepstack_analysis_pipeline_visualization.html
+├── meara_agent_docs/              # AI agent reference documentation
+├── tools/                         # Utility scripts
+│   ├── clean_markdown.py
+│   └── markdown_cleaner.py
+├── backup_meara_docs/             # Backup of original documentation
+├── reference/                     # Reference configurations
+├── requirements.txt               # Python dependencies
+├── CLAUDE.md                      # This documentation file
+└── *.txt, *.json                 # Input/output files
+```
+
 ## Core Architecture
 
-The project consists of a single main script (`deepstack_collector.py`) that performs comprehensive website analysis across five key areas:
+The project consists of a single main script (`src/deepstack_collector.py`) that performs comprehensive website analysis across five key areas:
 
 1. **Marketing Technology & Data Foundation**: Identifies MarTech tools (Google Analytics, HubSpot, Meta Pixel, etc.), dataLayer content, and cookie consent mechanisms
 2. **Organic Presence & Content Signals**: Extracts SEO-related metadata, heading tags, structured data, and canonical URLs
@@ -57,12 +78,12 @@ The project consists of a single main script (`deepstack_collector.py`) that per
 
 ### Single URL Analysis
 ```bash
-python3 deepstack_collector.py -u https://example.com
+python3 src/deepstack_collector.py -u https://example.com
 ```
 
 ### Batch Analysis
 ```bash
-python3 deepstack_collector.py
+python3 src/deepstack_collector.py
 ```
 This reads URLs from `urls_to_analyze.txt` (one URL per line, comments start with #)
 
@@ -124,6 +145,14 @@ The `meara_agent_docs/` folder contains reference documentation for building AI 
 
 These documents are used to build Claude Projects, Gemini Gems, ChatGPT Custom GPTs, and other AI agents that process DeepStack's raw JSON output into strategic marketing intelligence. They serve as reference material for improving the collector's data structure and ensuring it captures the signals needed for downstream analysis.
 
+## Documentation
+
+The `docs/` directory contains project documentation and visualization files:
+
+- **deepstack-workflow-architecture.md**: Complete workflow documentation including L1/L2/L3 output levels and GTM intelligence pipeline
+- **deepstack_scale_gtm_sankey_diagram.html**: Interactive Sankey diagram visualization of the GTM analysis pipeline  
+- **deepstack_analysis_pipeline_visualization.html**: Visual representation of the analysis pipeline components
+
 ## Tools Directory
 
 The `tools/` directory contains utility scripts for maintaining and processing project files:
@@ -136,16 +165,19 @@ These tools were used to clean the MEARA documentation files that were exported 
 ### Usage Examples
 
 Clean a single markdown file:
+
 ```bash
 python3 tools/clean_markdown.py input.md -o output.md
 ```
 
 Test cleaning without writing changes:
+
 ```bash
 python3 tools/clean_markdown.py input.md --dry-run
 ```
 
 Clean all markdown files in a directory:
+
 ```bash
 find meara_agent_docs -name "*.md" -exec python3 tools/clean_markdown.py {} \;
 ```
