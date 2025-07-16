@@ -88,11 +88,13 @@ You can run the DeepStack Collector from the root directory using either of the 
 ### Using Python Launcher (Recommended)
 
 **Single URL Analysis:**
+
 ```bash
 python3 deepstack.py -u https://example.com
 ```
 
 **Batch Analysis:**
+
 ```bash
 python3 deepstack.py
 ```
@@ -100,11 +102,13 @@ python3 deepstack.py
 ### Using Shell Launcher
 
 **Single URL Analysis:**
+
 ```bash
 ./deepstack.sh -u https://example.com
 ```
 
 **Batch Analysis:**
+
 ```bash
 ./deepstack.sh
 ```
@@ -114,11 +118,13 @@ python3 deepstack.py
 You can also run the script directly from the src directory:
 
 **Single URL Analysis:**
+
 ```bash
 python3 src/deepstack_collector.py -u https://example.com
 ```
 
 **Batch Analysis:**
+
 ```bash
 python3 src/deepstack_collector.py
 ```
@@ -128,7 +134,11 @@ python3 src/deepstack_collector.py
 ## Input/Output Files
 
 - **Input**: `urls_to_analyze.txt` - Contains URLs to analyze (created automatically if missing)
-- **Output**: `deepstack_collector_output.json` - Structured analysis results with metadata
+- **Output**: 
+  - **Single URL mode**: `deepstack_output-{domain}.json` (e.g., `deepstack_output-example.com.json`)
+    - Automatically extracts domain name from URL, removes `www.` prefix
+    - Replaces colons with underscores for ports (e.g., `example.com_8080`)
+  - **Batch mode**: `deepstack_output.json` - Structured analysis results with metadata
 
 ## Detection Signatures
 

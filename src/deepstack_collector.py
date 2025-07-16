@@ -7,6 +7,7 @@ from datetime import datetime, timezone # ADD THIS LINE (or ensure it's there an
 import random # ADD THIS LINE FOR RANDOM DELAYS
 from playwright_stealth import stealth_sync # ADD THIS LINE
 import argparse # ADD THIS LINE
+from urllib.parse import urlparse # For extracting domain names
 
 
 
@@ -903,7 +904,15 @@ def main():
         }
 
         # Write the JSON output to a file
-        output_filename = "deepstack_collector_output.json"
+        # Generate output filename based on execution mode
+        if args.url:
+            # Single URL mode - extract domain name for filename
+            parsed_url = urlparse(args.url)
+            domain = parsed_url.netloc.replace('www.', '').replace(':', '_')  # Remove www. and replace : with _
+            output_filename = f"deepstack_output-{domain}.json"
+        else:
+            # Batch mode - use generic filename
+            output_filename = "deepstack_output.json"
         try:
             with open(output_filename, 'w') as f:
                 json.dump(final_json_output, f, indent=2) # indent=2 for pretty-printing
