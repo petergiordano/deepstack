@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepStack Collector UI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Work+Sans:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Applying ScaleVP Branding Guidelines */
+        :root {
+            --font-headline: 'Work Sans', sans-serif;
+            --font-body: 'Outfit', sans-serif;
+
+            --color-primary-blue: #0d71a9;
+            --color-primary-gold: #e5a819;
+            --color-dark-green: #224f41;
+            --color-black: #060119;
+            --color-light-grey: #f6f6f6;
+            --color-white: #ffffff;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-light-grey);
+            color: var(--color-black);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-headline);
+            text-transform: none; /* Enforces sentence case */
+        }
+        
+        /* Floating label styles */
+        .input-group:focus-within label {
+            transform: translateY(-1.25rem);
+            font-size: 0.75rem;
+            color: var(--color-primary-blue);
+        }
+        .input-group input:not(:placeholder-shown) + label,
+        .input-group textarea:not(:placeholder-shown) + label {
+            transform: translateY(-1.25rem);
+            font-size: 0.75rem;
+        }
+
+        /* Custom Button Styles */
+        .btn-primary {
+            background-color: var(--color-primary-blue);
+            color: var(--color-white);
+        }
+        .btn-primary:hover {
+            background-color: #3e8dba; /* Approved lighter blue */
+        }
+        .btn-secondary {
+            background-color: var(--color-dark-green);
+            color: var(--color-white);
+        }
+        .btn-secondary:hover {
+            background-color: #528577; /* Approved lighter green */
+        }
+        
+        /* Custom Tab Styles */
+        .tab-button {
+            border-bottom: 3px solid transparent;
+            text-transform: none; /* Enforces sentence case */
+        }
+        .tab-button.active {
+            color: var(--color-primary-blue);
+            border-bottom-color: var(--color-primary-gold);
+        }
+
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+    <div class="container mx-auto p-4 md:p-8 max-w-2xl">
+        <div class="bg-white rounded-2xl shadow-lg p-8" style="box-shadow: none; border: 1px solid #e5ecea;">
+            <div class="text-center mb-8">
+                <h1 class="text-3xl font-bold">DeepStack Collector</h1>
+                <p class="text-gray-500 mt-2">Analyze website MarTech stacks and competitive intelligence</p>
+            </div>
+
+            <!-- Input Tabs -->
+            <div class="mb-6 border-b border-gray-200">
+                <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="inputTabs" role="tablist">
+                    <li class="mr-2" role="presentation">
+                        <button class="inline-block p-4 tab-button" id="single-url-tab" type="button" role="tab" aria-controls="single-url" aria-selected="true">
+                            <i class="fas fa-link mr-2"></i>Single URL
+                        </button>
+                    </li>
+                    <li class="mr-2" role="presentation">
+                        <button class="inline-block p-4 tab-button hover:text-gray-600" id="multi-url-tab" type="button" role="tab" aria-controls="multi-url" aria-selected="false">
+                            <i class="fas fa-align-left mr-2"></i>Multiple URLs
+                        </button>
+                    </li>
+                    <li class="mr-2" role="presentation">
+                        <button class="inline-block p-4 tab-button hover:text-gray-600" id="file-upload-tab" type="button" role="tab" aria-controls="file-upload" aria-selected="false">
+                            <i class="fas fa-file-upload mr-2"></i>Upload file
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Tab Content -->
+            <div id="tabContent">
+                <!-- Single URL Input -->
+                <div class="p-4 rounded-lg bg-gray-50" id="single-url" role="tabpanel" aria-labelledby="single-url-tab">
+                     <div class="relative input-group">
+                        <input type="text" id="singleUrlInput" placeholder=" " class="block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-transparent focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        <label for="singleUrlInput" class="absolute left-3 top-2 text-gray-500 transition-all duration-200 ease-in-out pointer-events-none">e.g., https://example.com</label>
+                    </div>
+                </div>
+
+                <!-- Multiple URL Input -->
+                <div class="hidden p-4 rounded-lg bg-gray-50" id="multi-url" role="tabpanel" aria-labelledby="multi-url-tab">
+                    <div class="relative input-group">
+                        <textarea id="multiUrlInput" rows="4" placeholder=" " class="block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-transparent focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+                        <label for="multiUrlInput" class="absolute left-3 top-2 text-gray-500 transition-all duration-200 ease-in-out pointer-events-none">Enter URLs, one per line</label>
+                    </div>
+                </div>
+
+                <!-- File Upload Input -->
+                <div class="hidden p-4 rounded-lg bg-gray-50" id="file-upload" role="tabpanel" aria-labelledby="file-upload-tab">
+                    <label for="file-upload-input" class="flex flex-col items-center justify-center w-full h-32 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100">
+                        <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                            <i class="fas fa-cloud-upload-alt text-4xl text-gray-400"></i>
+                            <p class="mb-2 text-sm text-gray-500"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+                            <p class="text-xs text-gray-500">.txt file with URLs</p>
+                        </div>
+                        <input id="file-upload-input" type="file" class="hidden" accept=".txt">
+                    </label>
+                    <div id="file-info" class="mt-2 text-sm text-gray-600"></div>
+                </div>
+            </div>
+
+            <div class="mt-8">
+                <button id="runAnalysisBtn" class="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-lg shadow-md font-medium btn-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    <span id="btn-text">Run analysis</span>
+                    <i id="btn-loader" class="fas fa-spinner fa-spin ml-2 hidden"></i>
+                </button>
+            </div>
+
+            <!-- Results Section -->
+            <div id="results-section" class="mt-8 hidden">
+                <h2 class="text-xl font-bold mb-4" style="font-family: var(--font-headline);">Analysis results</h2>
+                <div class="rounded-lg p-4 text-white overflow-x-auto" style="background-color: var(--color-black);">
+                    <pre><code id="results-output" class="text-sm"></code></pre>
+                </div>
+                <button id="downloadJsonBtn" class="mt-4 w-full flex justify-center items-center py-2 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium btn-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+                    <i class="fas fa-download mr-2"></i>Download JSON
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const tabElements = [
+            { id: 'single-url', triggerEl: document.querySelector('#single-url-tab'), targetEl: document.querySelector('#single-url') },
+            { id: 'multi-url', triggerEl: document.querySelector('#multi-url-tab'), targetEl: document.querySelector('#multi-url') },
+            { id: 'file-upload', triggerEl: document.querySelector('#file-upload-tab'), targetEl: document.querySelector('#file-upload') }
+        ];
+
+        let activeTab = 'single-url';
+        const fileUploadInput = document.getElementById('file-upload-input');
+        const fileInfo = document.getElementById('file-info');
+
+        function setActiveTab(tabId) {
+            activeTab = tabId;
+            tabElements.forEach(tab => {
+                if (tab.id === tabId) {
+                    tab.triggerEl.classList.add('active');
+                    tab.triggerEl.setAttribute('aria-selected', 'true');
+                    tab.targetEl.classList.remove('hidden');
+                } else {
+                    tab.triggerEl.classList.remove('active');
+                    tab.triggerEl.setAttribute('aria-selected', 'false');
+                    tab.targetEl.classList.add('hidden');
+                }
+            });
+        }
+        
+        tabElements.forEach(tab => {
+            tab.triggerEl.addEventListener('click', () => setActiveTab(tab.id));
+        });
+
+        setActiveTab('single-url'); // Set initial tab
+
+        fileUploadInput.addEventListener('change', (event) => {
+            const file = event.target.files[0];
+            if (file) {
+                fileInfo.textContent = `File selected: ${file.name}`;
+            } else {
+                fileInfo.textContent = '';
+            }
+        });
+
+        const runAnalysisBtn = document.getElementById('runAnalysisBtn');
+        const btnText = document.getElementById('btn-text');
+        const btnLoader = document.getElementById('btn-loader');
+        const resultsSection = document.getElementById('results-section');
+        const resultsOutput = document.getElementById('results-output');
+        const downloadJsonBtn = document.getElementById('downloadJsonBtn');
+
+        let analysisResult = {};
+        let currentJobId = null;
+        let pollingInterval = null;
+
+        runAnalysisBtn.addEventListener('click', () => {
+            if (activeTab === 'single-url') {
+                const url = document.getElementById('singleUrlInput').value.trim();
+                if (url) {
+                    startAnalysis({ url: url });
+                } else {
+                    alert('Please provide a URL.');
+                }
+            } else if (activeTab === 'multi-url') {
+                const urlText = document.getElementById('multiUrlInput').value.trim();
+                if (urlText) {
+                    startAnalysis({ urls: urlText });
+                } else {
+                    alert('Please provide URLs.');
+                }
+            } else if (activeTab === 'file-upload') {
+                const file = fileUploadInput.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = (e) => {
+                        const content = e.target.result;
+                        if (content.trim()) {
+                            startAnalysis({ file_content: content });
+                        } else {
+                            alert('File is empty or contains no valid URLs.');
+                        }
+                    };
+                    reader.readAsText(file);
+                } else {
+                    alert('Please select a file.');
+                }
+            }
+        });
+
+        async function startAnalysis(data) {
+            try {
+                btnText.textContent = 'Starting analysis...';
+                btnLoader.classList.remove('hidden');
+                runAnalysisBtn.disabled = true;
+                resultsSection.classList.add('hidden');
+
+                const response = await fetch('/api/analyze', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+                
+                if (!response.ok) {
+                    throw new Error(result.error || 'Analysis failed');
+                }
+
+                currentJobId = result.job_id;
+                btnText.textContent = `Analyzing ${result.urls_count} URL${result.urls_count > 1 ? 's' : ''}...`;
+                
+                // Start polling for status
+                startPolling();
+                
+            } catch (error) {
+                console.error('Analysis error:', error);
+                alert('Error starting analysis: ' + error.message);
+                resetUI();
+            }
+        }
+
+        function startPolling() {
+            if (pollingInterval) {
+                clearInterval(pollingInterval);
+            }
+            
+            pollingInterval = setInterval(async () => {
+                try {
+                    const response = await fetch(`/api/status/${currentJobId}`);
+                    const status = await response.json();
+                    
+                    if (status.status === 'completed') {
+                        clearInterval(pollingInterval);
+                        await loadResults();
+                    } else if (status.status === 'error') {
+                        clearInterval(pollingInterval);
+                        alert('Analysis failed: ' + (status.error || 'Unknown error'));
+                        resetUI();
+                    } else {
+                        // Update progress
+                        btnText.textContent = `Analyzing... ${status.progress || 0}%`;
+                    }
+                } catch (error) {
+                    console.error('Polling error:', error);
+                }
+            }, 2000);
+        }
+
+        async function loadResults() {
+            try {
+                const response = await fetch(`/api/result/${currentJobId}`);
+                const result = await response.json();
+                
+                if (!response.ok) {
+                    throw new Error(result.error || 'Failed to load results');
+                }
+
+                analysisResult = result;
+                resultsOutput.textContent = JSON.stringify(result, null, 2);
+                resultsSection.classList.remove('hidden');
+                resetUI();
+                
+            } catch (error) {
+                console.error('Results loading error:', error);
+                alert('Error loading results: ' + error.message);
+                resetUI();
+            }
+        }
+
+        function resetUI() {
+            btnText.textContent = 'Run analysis';
+            btnLoader.classList.add('hidden');
+            runAnalysisBtn.disabled = false;
+        }
+
+        downloadJsonBtn.addEventListener('click', () => {
+            if (!analysisResult) {
+                alert('No results to download');
+                return;
+            }
+            
+            // Generate filename based on analysis type
+            let filename = 'deepstack_output.json';
+            if (analysisResult.url_analysis_results && analysisResult.url_analysis_results.length === 1) {
+                // Single URL - extract domain name
+                const url = analysisResult.url_analysis_results[0].url;
+                try {
+                    const domain = new URL(url).hostname.replace('www.', '').replace(':', '_');
+                    filename = `deepstack_output-${domain}.json`;
+                } catch (e) {
+                    // Fallback to default name if URL parsing fails
+                }
+            }
+            
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(analysisResult, null, 2));
+            const downloadAnchorNode = document.createElement('a');
+            downloadAnchorNode.setAttribute("href", dataStr);
+            downloadAnchorNode.setAttribute("download", filename);
+            document.body.appendChild(downloadAnchorNode); 
+            downloadAnchorNode.click();
+            downloadAnchorNode.remove();
+        });
+
+    </script>
+</body>
+</html>

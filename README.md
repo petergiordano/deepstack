@@ -79,22 +79,48 @@ DeepStack Collector is the first step in a comprehensive three-step marketing an
 
 ## Usage
 
-### Single URL Analysis
+DeepStack Collector can be used in two ways: through a **web interface** (recommended) or via **command line**.
 
-Analyze a single website:
+### Web Interface (Recommended)
+
+The easiest way to use DeepStack Collector is through the local web interface:
+
+1. **Install dependencies** (if not already done):
+
+   ```bash
+   source venv/bin/activate
+   pip install -r requirements.txt
+   ```
+
+2. **Start the web server**:
+
+   ```bash
+   python app.py
+   ```
+
+3. **Open your browser** to `http://localhost:5000`
+
+4. **Use the interface** to:
+   - Analyze single URLs
+   - Analyze multiple URLs (paste or upload file)
+   - View results in real-time
+   - Download JSON results
+
+### Command Line Interface
+
+For programmatic use or batch processing:
+
+#### Single URL Analysis
 
 ```bash
 python3 deepstack.py -u https://example.com
 ```
 
-Output will be saved to: `output/deepstack_output-example.com.json`
+Output: `output/deepstack_output-example.com.json`
 
-### Batch Analysis
+#### Batch Analysis
 
-Analyze multiple websites from a text file:
-
-1. Create a file named `urls_to_analyze.txt` in the project root
-2. Add URLs (one per line):
+1. Create `urls_to_analyze.txt` in the project root:
 
    ```text
    https://example.com
@@ -102,15 +128,15 @@ Analyze multiple websites from a text file:
    # Comments start with #
    ```
 
-3. Run without arguments:
+2. Run batch analysis:
 
    ```bash
    python3 deepstack.py
    ```
 
-Output will be saved to: `output/deepstack_output.json`
+Output: `output/deepstack_output.json`
 
-### Alternative Execution Methods
+#### Alternative Execution Methods
 
 Using the shell script:
 
