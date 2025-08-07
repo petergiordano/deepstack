@@ -1,7 +1,0 @@
-# My list of B2B SaaS Companies
-# www.salesforce.com  # The script will add https://
-# https://www.anothercompany.com (example of a commented-out URL)
-https://abacus.ai
-https://6sense.com
-https://chorus.ai
-

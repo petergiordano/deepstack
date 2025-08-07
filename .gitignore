@@ -3,6 +3,8 @@ output/
 
 # URL input files (may contain sensitive URLs)
 urls_to_analyze*.txt
+# Exception: Allow the example file to be tracked
+!urls_to_analyze-example.txt
 
 # Python
 __pycache__/
