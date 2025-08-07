@@ -253,9 +253,9 @@ if __name__ == '__main__':
     output_dir.mkdir(exist_ok=True)
     
     print("🚀 Starting DeepStack Collector Web Interface...")
-    print("📊 Open your browser to: http://localhost:5000")
+    print("📊 Open your browser to: http://localhost:5001")
     print("⚠️  Make sure you've activated the virtual environment and installed requirements!")
     print("💡 To stop the server, press Ctrl+C")
     
-    # Run Flask app
-    app.run(host='127.0.0.1', port=5000, debug=True, threaded=True)
+    # Run Flask app on port 5001 (5000 is often used by macOS AirPlay)
+    app.run(host='127.0.0.1', port=5001, debug=True, threaded=True)

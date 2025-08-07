@@ -98,7 +98,7 @@ The easiest way to use DeepStack Collector is through the local web interface:
    python app.py
    ```
 
-3. **Open your browser** to `http://localhost:5000`
+3. **Open your browser** to `http://localhost:5001`
 
 4. **Use the interface** to:
    - Analyze single URLs
