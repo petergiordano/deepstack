@@ -3,6 +3,9 @@ output/
 # Exception: Allow the example output file to be tracked
 !output/deepstack_output-example.com.json
 
+# Private documentation
+docs/scalevp_branding_guidelines.md
+
 # URL input files (may contain sensitive URLs)
 urls_to_analyze*.txt
 # Exception: Allow the example file to be tracked
