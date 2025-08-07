@@ -1,5 +1,7 @@
 # DeepStack Output Directory
 output/
+# Exception: Allow the example output file to be tracked
+!output/deepstack_output-example.com.json
 
 # URL input files (may contain sensitive URLs)
 urls_to_analyze*.txt

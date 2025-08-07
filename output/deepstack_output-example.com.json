@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "analysis_timestamp": "2024-01-15T10:30:00.000Z",
+    "tool_version": "DeepStack Collector v1.0",
+    "total_urls_analyzed": 1
+  },
+  "results": [
+    {
+      "url": "https://example.com",
+      "timestamp": "2024-01-15T10:30:00.000Z",
+      "marketing_tech_data_foundation": {
+        "detected_martech_tools": [
+          "Google Analytics 4",
+          "Google Tag Manager",
+          "Meta Pixel"
+        ],
+        "dataLayer_content": {
+          "page_type": "homepage",
+          "user_logged_in": false
+        },
+        "cookie_consent_tools": [
+          "OneTrust"
+        ]
+      },
+      "organic_presence_content_signals": {
+        "seo_metadata": {
+          "title": "Example Domain",
+          "description": "Example Domain. This domain is for use in illustrative examples in documents.",
+          "keywords": null,
+          "canonical_url": "https://example.com/",
+          "robots": null,
+          "og_title": "Example Domain",
+          "og_description": "Example Domain for documentation",
+          "og_image": null,
+          "twitter_card": null
+        },
+        "heading_structure": {
+          "h1_count": 1,
+          "h2_count": 0,
+          "h3_count": 0,
+          "h1_tags": [
+            "Example Domain"
+          ]
+        },
+        "structured_data": []
+      },
+      "user_experience_performance": {
+        "viewport_settings": "width=device-width, initial-scale=1",
+        "cdn_usage": [
+          "Cloudflare"
+        ],
+        "lazy_loading": false,
+        "images_with_alt_text": 0,
+        "total_images": 0
+      },
+      "conversion_funnel_effectiveness": {
+        "conversion_events": [
+          "page_view",
+          "scroll_depth"
+        ],
+        "forms_analysis": {
+          "total_forms": 1,
+          "forms": [
+            {
+              "form_index": 1,
+              "form_id": "contact-form",
+              "form_name": null,
+              "form_action": "/submit",
+              "form_method": "post",
+              "fields": [
+                {
+                  "type": "text",
+                  "name": "name",
+                  "id": "name",
+                  "placeholder": "Your Name",
+                  "required": true
+                },
+                {
+                  "type": "email",
+                  "name": "email",
+                  "id": "email",
+                  "placeholder": "Your Email",
+                  "required": true
+                },
+                {
+                  "type": "submit",
+                  "value": "Submit"
+                }
+              ]
+            }
+          ],
+          "iframe_forms": []
+        }
+      },
+      "competitive_posture_strategic_tests": {
+        "ab_testing_tools": [
+          "Optimizely"
+        ],
+        "feature_flags": []
+      }
+    }
+  ]
+}
