@@ -292,19 +292,12 @@ def main():
 
     with sync_playwright() as p:
         browser = p.chromium.launch(
-            headless=False,  # Set to False for testing, can be True later
+            headless=True,  # Run in headless mode for web interface
             args=[
                 "--disable-blink-features=AutomationControlled",
-                "--disable-features=IsolateOrigins,site-per-process",
-                "--disable-web-security",
-                "--disable-site-isolation-trials",
                 "--no-sandbox",
                 "--disable-setuid-sandbox",
                 "--disable-dev-shm-usage",
-                "--disable-accelerated-2d-canvas",
-                "--no-first-run",
-                "--no-zygote",
-                "--single-process",
                 "--disable-gpu"
             ]
         )

@@ -1,102 +1,63 @@
 {
-  "metadata": {
-    "analysis_timestamp": "2024-01-15T10:30:00.000Z",
-    "tool_version": "DeepStack Collector v1.0",
-    "total_urls_analyzed": 1
+  "collection_metadata": {
+    "collector_version": "1.0.0",
+    "collection_timestamp_utc": "2025-08-07T20:55:09.858372+00:00",
+    "total_urls_processed": 1,
+    "total_urls_successful": 1,
+    "total_urls_failed": 0
   },
-  "results": [
+  "url_analysis_results": [
     {
       "url": "https://example.com",
-      "timestamp": "2024-01-15T10:30:00.000Z",
-      "marketing_tech_data_foundation": {
-        "detected_martech_tools": [
-          "Google Analytics 4",
-          "Google Tag Manager",
-          "Meta Pixel"
-        ],
-        "dataLayer_content": {
-          "page_type": "homepage",
-          "user_logged_in": false
+      "fetch_status": "success",
+      "error_details": null,
+      "fetch_timestamp_utc": "2025-08-07T20:55:13.236956+00:00",
+      "page_title": "Example Domain",
+      "data": {
+        "marketing_technology_data_foundation": {
+          "martech_identified": [],
+          "dataLayer_summary": {
+            "exists": false,
+            "total_pushes": null,
+            "sample_pushes_structure": null,
+            "error": null
+          },
+          "cookie_consent_tools_identified": []
         },
-        "cookie_consent_tools": [
-          "OneTrust"
-        ]
-      },
-      "organic_presence_content_signals": {
-        "seo_metadata": {
-          "title": "Example Domain",
-          "description": "Example Domain. This domain is for use in illustrative examples in documents.",
-          "keywords": null,
-          "canonical_url": "https://example.com/",
-          "robots": null,
-          "og_title": "Example Domain",
-          "og_description": "Example Domain for documentation",
-          "og_image": null,
-          "twitter_card": null
-        },
-        "heading_structure": {
-          "h1_count": 1,
-          "h2_count": 0,
-          "h3_count": 0,
+        "organic_presence_content_signals": {
+          "meta_title": "Example Domain",
+          "meta_description": null,
+          "meta_keywords": null,
+          "canonical_url": null,
           "h1_tags": [
             "Example Domain"
-          ]
-        },
-        "structured_data": []
-      },
-      "user_experience_performance": {
-        "viewport_settings": "width=device-width, initial-scale=1",
-        "cdn_usage": [
-          "Cloudflare"
-        ],
-        "lazy_loading": false,
-        "images_with_alt_text": 0,
-        "total_images": 0
-      },
-      "conversion_funnel_effectiveness": {
-        "conversion_events": [
-          "page_view",
-          "scroll_depth"
-        ],
-        "forms_analysis": {
-          "total_forms": 1,
-          "forms": [
-            {
-              "form_index": 1,
-              "form_id": "contact-form",
-              "form_name": null,
-              "form_action": "/submit",
-              "form_method": "post",
-              "fields": [
-                {
-                  "type": "text",
-                  "name": "name",
-                  "id": "name",
-                  "placeholder": "Your Name",
-                  "required": true
-                },
-                {
-                  "type": "email",
-                  "name": "email",
-                  "id": "email",
-                  "placeholder": "Your Email",
-                  "required": true
-                },
-                {
-                  "type": "submit",
-                  "value": "Submit"
-                }
-              ]
-            }
           ],
-          "iframe_forms": []
+          "h2_tags": [],
+          "json_ld_scripts": [],
+          "robots_meta": null,
+          "hreflang_tags": []
+        },
+        "user_experience_performance_clues": {
+          "viewport_meta_content": "width=device-width, initial-scale=1",
+          "identified_cdn_domains": [],
+          "lazy_loading_images": {
+            "sampled_images": 0,
+            "with_lazy_loading": 0
+          },
+          "alt_text_images": {
+            "sampled_images": 0,
+            "with_alt_text": 0
+          }
+        },
+        "conversion_funnel_effectiveness": {
+          "identified_conversion_events": [],
+          "forms_analysis": []
+        },
+        "competitive_posture_strategic_tests": {
+          "ab_testing_tools_present": [],
+          "feature_flags_systems_identified": [],
+          "advanced_martech_indicators": []
         }
-      },
-      "competitive_posture_strategic_tests": {
-        "ab_testing_tools": [
-          "Optimizely"
-        ],
-        "feature_flags": []
       }
     }
   ]

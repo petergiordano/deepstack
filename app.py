@@ -57,24 +57,52 @@ def run_deepstack_analysis(job):
         job.started_at = datetime.utcnow()
         job.progress = 10
         
+        print(f"[DEBUG] Starting analysis for job {job.job_id}")
+        print(f"[DEBUG] URLs: {job.urls}")
+        
         # Ensure we're in the correct directory
         script_dir = os.path.dirname(os.path.abspath(__file__))
         os.chdir(script_dir)
+        print(f"[DEBUG] Working directory: {script_dir}")
         
-        # Activate virtual environment and run the collector
+        # Prepare virtual environment activation and run the collector
+        venv_activate = os.path.join(script_dir, 'venv', 'bin', 'activate')
         venv_python = os.path.join(script_dir, 'venv', 'bin', 'python')
+        
+        # Check if virtual environment exists
         if not os.path.exists(venv_python):
+            print("[DEBUG] Virtual environment not found, using system python")
             venv_python = 'python3'  # Fallback if venv not found
+        print(f"[DEBUG] Using Python: {venv_python}")
         
         collector_script = os.path.join(script_dir, 'src', 'deepstack_collector.py')
+        print(f"[DEBUG] Collector script: {collector_script}")
         
         if job.job_type == 'single' and len(job.urls) == 1:
-            # Single URL mode
-            cmd = [venv_python, collector_script, '-u', job.urls[0]]
+            # Single URL mode - use bash to activate venv first
+            bash_cmd = None
+            if os.path.exists(venv_activate):
+                # Create bash command to activate venv and run script
+                bash_cmd = f"source {venv_activate} && {venv_python} {collector_script} -u {job.urls[0]}"
+                cmd = ['bash', '-c', bash_cmd]
+            else:
+                # Fallback to direct execution
+                cmd = [venv_python, collector_script, '-u', job.urls[0]]
+                
+            print(f"[DEBUG] Running command: {bash_cmd if bash_cmd else ' '.join(cmd)}")
             job.progress = 50
             
-            # Run the command
-            result = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
+            # Run the command with real-time output
+            process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, cwd=script_dir)
+            stdout, stderr = process.communicate(timeout=300)
+            
+            print(f"[DEBUG] Command completed with return code: {process.returncode}")
+            if stdout:
+                print(f"[DEBUG] STDOUT: {stdout[:500]}...")
+            if stderr:
+                print(f"[DEBUG] STDERR: {stderr[:500]}...")
+            
+            result = process
             
             if result.returncode == 0:
                 # Find the output file
@@ -108,9 +136,16 @@ def run_deepstack_analysis(job):
                 
                 job.progress = 30
                 
-                # Run in batch mode
-                cmd = [venv_python, collector_script]
-                result = subprocess.run(cmd, capture_output=True, text=True, timeout=600)
+                # Run in batch mode - use bash to activate venv first
+                if os.path.exists(venv_activate):
+                    # Create bash command to activate venv and run script
+                    bash_cmd = f"source {venv_activate} && {venv_python} {collector_script}"
+                    cmd = ['bash', '-c', bash_cmd]
+                else:
+                    # Fallback to direct execution
+                    cmd = [venv_python, collector_script]
+                
+                result = subprocess.run(cmd, capture_output=True, text=True, timeout=600, cwd=script_dir)
                 
                 job.progress = 80
                 
@@ -246,6 +281,32 @@ def get_result(job_id):
 def health():
     """Health check endpoint"""
     return jsonify({'status': 'healthy', 'timestamp': datetime.utcnow().isoformat()})
+
+@app.route('/api/test')
+def test_collector():
+    """Test endpoint to verify collector script works"""
+    try:
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        venv_python = os.path.join(script_dir, 'venv', 'bin', 'python')
+        if not os.path.exists(venv_python):
+            venv_python = 'python3'
+        
+        collector_script = os.path.join(script_dir, 'src', 'deepstack_collector.py')
+        
+        # Test with help flag to see if script loads
+        cmd = [venv_python, collector_script, '--help']
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=10)
+        
+        return jsonify({
+            'returncode': result.returncode,
+            'stdout': result.stdout[:500],
+            'stderr': result.stderr[:500],
+            'python_path': venv_python,
+            'script_exists': os.path.exists(collector_script),
+            'script_path': collector_script
+        })
+    except Exception as e:
+        return jsonify({'error': str(e)})
 
 if __name__ == '__main__':
     # Ensure output directory exists
