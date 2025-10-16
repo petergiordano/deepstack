@@ -41,9 +41,11 @@ This pipeline transforms raw website data into strategic marketing intelligence 
 ```text
 deepstack/
 ├── deepstack.py                   # Python launcher script (recommended)
+├── deepstack_branding.py          # Branding collector launcher script
 ├── deepstack.sh                   # Shell launcher script
 ├── src/                           # Source code
-│   └── deepstack_collector.py     # Main analysis script
+│   ├── deepstack_collector.py     # Main analysis script
+│   └── deepstack_branding_collector.py  # Branding analysis script
 ├── docs/                          # Documentation and visualizations
 │   ├── deepstack-workflow-architecture.md
 │   ├── deepstack_scale_gtm_sankey_diagram.html
@@ -102,13 +104,14 @@ The project consists of a single main script (`src/deepstack_collector.py`) that
 4. **Install Playwright browsers:**
 
    ```bash
-   playwright install chromium
+   playwright install firefox
    ```
+
+   **Note**: The tool uses Firefox by default. Chromium may have compatibility issues on some systems (particularly macOS Sequoia). If you need to use Chromium, install it with `playwright install chromium` and modify the browser launch code in `src/deepstack_collector.py`.
 
 ### Key Dependencies
 
 - `playwright==1.40.0` - Web automation framework
-- `playwright-stealth==1.0.6` - Stealth mode for avoiding detection
 - `beautifulsoup4==4.12.2` - HTML parsing library
 - Standard library: `json`, `datetime`, `re`, `random`, `time`, `argparse`
 
@@ -187,6 +190,126 @@ python3 src/deepstack_collector.py
     - Replaces colons with underscores for ports (e.g., `output/deepstack_output-example.com_8080.json`)
   - **Batch mode**: `output/deepstack_output.json` - Structured analysis results with metadata
 
+## DeepStack Branding Collector
+
+The **DeepStack Branding Collector** is a specialized standalone tool that analyzes brand identity and visual design elements. It runs independently from the main collector and can be used to extract branding-specific intelligence.
+
+### What It Analyzes
+
+The Branding Collector extracts four key categories of brand identity signals:
+
+1. **Color Palette**
+   - CSS custom properties (CSS variables)
+   - Computed colors from key elements (headers, buttons, links, etc.)
+   - Primary brand colors with frequency analysis
+   - Color usage patterns across the site
+
+2. **Typography**
+   - Web font services detected (Google Fonts, Adobe Fonts, etc.)
+   - Font families used across different elements
+   - Typeface hierarchy (headings, body, buttons)
+   - Font weights, sizes, and styling
+   - Custom web fonts loaded
+
+3. **Visual Assets**
+   - Logo URL, alt text, and dimensions
+   - Favicon and touch icons
+   - Open Graph images
+   - SVG logos
+
+4. **Design Patterns**
+   - Button styles (padding, border radius, colors)
+   - Spacing system patterns
+   - Border radius values
+   - Box shadow variations
+
+### Running the Branding Collector
+
+The branding collector uses the same CLI interface as the main collector:
+
+**Single URL Analysis:**
+
+```bash
+python3 deepstack_branding.py -u https://example.com
+# Output: output/deepstack_branding-example.com.json
+
+python3 deepstack_branding.py -u https://www.google.com
+# Output: output/deepstack_branding-google.com.json
+```
+
+**Batch Analysis:**
+
+```bash
+python3 deepstack_branding.py
+# Output: output/deepstack_branding.json (reads from urls_to_analyze.txt)
+```
+
+**Direct Execution:**
+
+```bash
+python3 src/deepstack_branding_collector.py -u https://example.com
+```
+
+### Output Format
+
+The branding collector produces JSON output in a compatible format:
+
+```json
+{
+  "collection_metadata": {
+    "collector_version": "1.0.0",
+    "collector_type": "branding",
+    "collection_timestamp_utc": "2025-01-15T10:30:00Z",
+    "total_urls_processed": 1,
+    "total_urls_successful": 1
+  },
+  "url_analysis_results": [{
+    "url": "https://example.com",
+    "fetch_status": "success",
+    "page_title": "Example Site",
+    "data": {
+      "color_palette": {
+        "css_custom_properties": {...},
+        "computed_colors": {...},
+        "primary_colors": ["#1a73e8", "#ffffff", ...],
+        "color_frequency": {"#1a73e8": 15, ...}
+      },
+      "typography": {
+        "web_font_services": ["GoogleFonts"],
+        "font_families_used": {...},
+        "google_fonts_detected": ["Roboto", "Open Sans"],
+        "typeface_hierarchy": {...}
+      },
+      "visual_assets": {
+        "logo": {...},
+        "favicon": {...},
+        "og_image": "..."
+      },
+      "design_patterns": {
+        "button_styles": {...},
+        "spacing_system": {...}
+      }
+    }
+  }]
+}
+```
+
+### Use Cases
+
+- **Competitive brand analysis**: Compare visual identity across competitors
+- **Brand consistency audits**: Verify brand guidelines implementation
+- **Design system documentation**: Extract design tokens and patterns
+- **Rebranding research**: Analyze current brand implementation before redesign
+- **Marketing analysis enhancement**: Add brand identity insights to technical analysis
+
+### Integration with Main Pipeline
+
+The branding collector can be used:
+
+1. **Standalone** - For dedicated brand analysis projects
+2. **Alongside main collector** - Run both tools to get comprehensive technical + branding data
+3. **In analysis pipeline** - Feed branding output into DeepStack Analysis Gems alongside main collector output
+
 ## Detection Signatures
 
 The tool uses regex pattern matching to identify technologies through:
@@ -206,12 +329,15 @@ Key signature dictionaries:
 
 ## Browser Configuration
 
-The tool uses Chromium with stealth mode and specific launch arguments to avoid detection:
+The tool uses Firefox by default with the following configuration:
 
-- Headless mode configurable (`headless=False` for debugging)
+- Headless mode enabled by default
 - Custom user agent and viewport settings
 - Cloudflare challenge detection and handling
 - Random delays between requests (2-5 seconds)
+- Network idle wait strategy for better JavaScript rendering
+
+**Note**: Firefox is the default browser due to better compatibility across platforms. The previous Chromium configuration with stealth mode may be restored if needed, but requires modifications to `src/deepstack_collector.py` (lines 294-296) to switch back to `p.chromium.launch()` and re-enable `stealth_sync()`.
 
 ## Special Features
 
@@ -280,12 +406,37 @@ The `docs/` directory also contains workflow documentation and interactive visua
 
 The `tools/` directory contains utility scripts for maintaining and processing project files:
 
+### Branding Formatter for Gamma.app
+
+- **format_branding_for_gamma.py**: Converts DeepStack branding JSON output into a human-readable format compatible with Gamma.app's color palette interface
+
+**Usage:**
+
+```bash
+# Display formatted palette in terminal
+python3 tools/format_branding_for_gamma.py output/deepstack_branding-example.com.json
+
+# Save to file
+python3 tools/format_branding_for_gamma.py output/deepstack_branding-example.com.json -o gamma_palette.txt
+```
+
+**Output Format:**
+- Primary accent color (1 color for main brand identity)
+- Secondary accent colors (8 colors for variety and emphasis)
+- Text colors (heading and body)
+- Background colors (card and page backgrounds)
+- Full brand color palette reference (all CSS variables)
+
+The formatter intelligently selects the most vibrant, mid-brightness colors from the detected CSS variables and organizes them for easy import into Gamma.app or other design tools.
+
+### Markdown Cleaning Tools
+
 - **clean_markdown.py**: Command-line interface for cleaning escaped markdown characters from Google Docs exports
 - **markdown_cleaner.py**: Core cleaning function that removes backslash escapes from markdown formatting (headers, emphasis, lists, links, etc.)
 
 These tools were used to clean the MEARA documentation files that were exported from Google Docs with escaped characters. The cleaning scripts can be run on individual files or in batch mode using shell commands.
 
-### Usage Examples
+**Usage Examples:**
 
 Clean a single markdown file:
 

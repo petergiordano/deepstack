@@ -31,7 +31,7 @@ import re
 import json  # Ensure this is present
 from datetime import datetime, timezone  # For timestamps
 import random  # For random delays between requests
-from playwright_stealth import stealth_sync  # For avoiding detection
+# from playwright_stealth import stealth_sync  # Not needed for Firefox (only works with Chromium)
 import argparse  # For command-line argument parsing
 from urllib.parse import urlparse  # For extracting domain names
 import os  # For directory operations
@@ -291,15 +291,8 @@ def main():
     # Ensure the main processing loop uses 'urls_to_process'
 
     with sync_playwright() as p:
-        browser = p.chromium.launch(
-            headless=True,  # Run in headless mode for web interface
-            args=[
-                "--disable-blink-features=AutomationControlled",
-                "--no-sandbox",
-                "--disable-setuid-sandbox",
-                "--disable-dev-shm-usage",
-                "--disable-gpu"
-            ]
+        browser = p.firefox.launch(
+            headless=True
         )
         context = browser.new_context(
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
@@ -328,12 +321,17 @@ def main():
             data_layer_content_summary = None
             data_layer_exists_on_page = False
 
+            page = None  # Initialize page variable
             try:
+                print(f"  Creating new page...")
                 page = context.new_page()
-                stealth_sync(page) # APPLY STEALTH AFTER PAGE CREATION
+                # Note: stealth_sync only works with Chromium, skip for Firefox
+                print(f"  Setting up request logger...")
                 page.on("request", lambda request: requests_log.append(request.url))
                 # Modified wait strategy with better Cloudflare handling
-                page.goto(current_url, wait_until="domcontentloaded", timeout=60000) # Increased timeout for Cloudflare
+                print(f"  Navigating to {current_url}...")
+                page.goto(current_url, wait_until="networkidle", timeout=90000)  # Increased timeout, wait for network idle
+                print(f"  Page navigation completed.")
                 
                 # --- Enhanced Cloudflare Challenge Detection & Wait ---
                 initial_title = page.title()
@@ -882,7 +880,6 @@ def main():
                 }
                 processed_urls_results_list.append(url_result_object)
                 successful_fetches += 1
-                page.close()
 
             except Exception as e:
                 print(f"Could not process {current_url}. Error: {e}")
@@ -897,9 +894,15 @@ def main():
                 }
                 processed_urls_results_list.append(url_result_object)
                 failed_fetches += 1
-                # Ensure page is closed if it was opened before the error
-                if 'page' in locals() and page and not page.is_closed():
-                    page.close()
+
+            finally:
+                # Ensure page is closed exactly once, whether success or error
+                try:
+                    if 'page' in locals() and page and not page.is_closed():
+                        page.close()
+                except Exception as e_page_close:
+                    # Silently handle page close errors as they're not critical
+                    pass
             time.sleep(1)
 
         # --- End of URL Processing Loop ---
